@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dy32PR2N0b3MGz/Oe/1N8P84gOgnpI3NBl5Vcf/OiRGMVZSTynKtiLXDK6kiZXGAJuX4nBHZOper/WbrEHEr+A==",
+  "success": true,
+  "projectFilePath": "D:\\QLThueXe\\QLThueXe\\Test\\Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

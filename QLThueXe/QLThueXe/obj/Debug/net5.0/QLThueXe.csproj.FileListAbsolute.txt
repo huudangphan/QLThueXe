@@ -1,4 +1,3 @@
-D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\QLThueXe.csproj.AssemblyReference.cache
 D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\QLThueXe.GeneratedMSBuildEditorConfig.editorconfig
 D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\QLThueXe.AssemblyInfoInputs.cache
 D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\QLThueXe.AssemblyInfo.cs
@@ -35,3 +34,4 @@ D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\ref\QLThueXe.dll
 D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\QLThueXe.pdb
 D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\QLThueXe.genruntimeconfig.cache
 D:\QLThueXe\QLThueXe\QLThueXe\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\QLThueXe\QLThueXe\QLThueXe\obj\Debug\net5.0\QLThueXe.csproj.AssemblyReference.cache

@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using QLThueXe.Services.Interfaces;
+
 using QLThueXe.Services.Repositor;
 using System;
 using System.Collections.Generic;
@@ -30,7 +30,7 @@ namespace QLThueXe
         {
 
             services.AddControllers();
-            services.AddScoped<ITest, TestRe>();
+          
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "QLThueXe", Version = "v1" });

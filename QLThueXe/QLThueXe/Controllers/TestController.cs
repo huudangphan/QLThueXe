@@ -12,18 +12,24 @@ using Newtonsoft.Json;
 
 namespace QLThueXe.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class TestController : ControllerBase
-    {
-       
-        private IUnitOfWork unitOfWork { get; set; }
+    {      
+        
         TestRe tes = new TestRe();
         [HttpGet]
         public string Test()
         {
-            var a= JsonConvert.SerializeObject(tes.GetData());
-            return a;
+
+            return tes.GetData();
+        }
+        [HttpPost]
+        public HttpResult TestF()
+        {
+           
+            return tes.TestF();
+
         }
     }
 }

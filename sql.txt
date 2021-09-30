@@ -1,0 +1,53 @@
+create table hang_xe(
+	id_hang int GENERATED ALWAYS AS IDENTITY,
+	ten_hang varchar(20),
+	primary key(id_hang)
+		
+	)
+	
+	create table xe(
+		bien_so varchar(15),
+		id_hang int references hang_xe(id_hang),
+		ten_xe varchar(20),
+		gia_thue float,
+		ma_kiem_soat varchar(10),
+		primary key(bien_so)
+		
+	)
+	create table khach(
+		cmnd varchar(13),
+		ten varchar(40),
+		dia_chi varchar(50),
+		sdt char(12),
+		ngay_sinh date,
+		anh varchar(50),
+		primary key(cmnd)
+	)
+	
+	create table hop_dong(
+		id_hop_dong int GENERATED ALWAYS AS IDENTITY,
+		ngay_thue date,
+		ngay_tra date,
+		tinh_trang bool,
+		primary key(id_hop_dong)	
+		
+	)
+
+	create table ct_hop_dong(
+		id_hop_dong int references hop_dong(id_hop_dong),
+		bien_so_hd varchar(15) references xe(bien_so),
+		cmnd_hd varchar(13)references khach(cmnd),
+		gia_thue float,
+		so_ngay_thue int,
+		tong_tien float,
+		primary key(id_hop_dong,cmnd_hd)
+	)
+	
+	create table phieu_phat(
+	id_phieu_phat int GENERATED ALWAYS AS IDENTITY,
+	id_hop_dong int references hop_dong(id_hop_dong),
+	so_ngay_tre int,
+	tong_tien_phat float
+		
+	)
+	alter table phieu_phat add primary key(id_phieu_phat)
