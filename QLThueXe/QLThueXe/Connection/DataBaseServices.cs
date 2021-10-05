@@ -25,33 +25,40 @@ namespace QLThueXe.Connection
         public string ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(conStr))
+            try
             {
-                connection.Open();
-
-                NpgsqlCommand command = new NpgsqlCommand(query, connection);
-
-                if (parameter != null)
+                using (NpgsqlConnection connection = new NpgsqlConnection(conStr))
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    connection.Open();
+
+                    NpgsqlCommand command = new NpgsqlCommand(query, connection);
+
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
+
+                    NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
+
+                    adapter.Fill(data);
+
+                    connection.Close();
                 }
-
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
-
-                adapter.Fill(data);
-
-                connection.Close();
             }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();                
+            }
+           
 
             return JsonConvert.SerializeObject(data);
         }

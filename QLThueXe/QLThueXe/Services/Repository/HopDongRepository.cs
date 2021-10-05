@@ -7,9 +7,9 @@ namespace QLThueXe.Services.Repository
 {
     public class HopDongRepository
     {
-        public string InsertHopDong(DateTime ngay_thue,DateTime ngay_tra,bool tinh_trang)
+        public string InsertHopDong(DateTime ngay_thue,DateTime ngay_tra,bool tinh_trang,DateTime ngay_tra_du_tinh)
         {
-            string query = string.Format("select * from insert_hop_dong('{0}','{1}','{2}')", ngay_thue, ngay_tra, tinh_trang);
+            string query = string.Format("select * from insert_hop_dong('{0}','{1}','{2}','{3}')", ngay_thue, ngay_tra, tinh_trang,ngay_tra_du_tinh);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
         public string SearchHopDong(DateTime _from_ngay_thue,DateTime _to_ngay_thue,DateTime _from_ngay_tra,DateTime _to_ngay_tra,bool _tinh_trang)

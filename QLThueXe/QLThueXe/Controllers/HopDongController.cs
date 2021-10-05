@@ -13,9 +13,9 @@ namespace QLThueXe.Controllers
     {
         HopDongRepository db = new HopDongRepository();
         [HttpPost]
-        public string InsertHopDong(DateTime ngay_thue, DateTime ngay_tra, bool tinh_trang)
+        public string InsertHopDong(DateTime ngay_thue, DateTime ngay_tra, bool tinh_trang,DateTime ngay_tra_du_tinh)
         {
-            return db.InsertHopDong(ngay_thue, ngay_tra, tinh_trang);
+            return db.InsertHopDong(ngay_thue, ngay_tra, tinh_trang,ngay_tra_du_tinh);
         }
         [HttpGet]
         public string SearchHopDong(DateTime _from_ngay_thue, DateTime _to_ngay_thue, DateTime _from_ngay_tra, DateTime _to_ngay_tra, bool _tinh_trang)
