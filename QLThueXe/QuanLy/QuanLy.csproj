@@ -37,7 +37,13 @@
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,12 +69,43 @@
     <Compile Include="fDanhSachXe.Designer.cs">
       <DependentUpon>fDanhSachXe.cs</DependentUpon>
     </Compile>
+    <Compile Include="fKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLichSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fLichSu.Designer.cs">
+      <DependentUpon>fLichSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMenu.Designer.cs">
+      <DependentUpon>fMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThemXeMoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fThemXeMoi.Designer.cs">
+      <DependentUpon>fThemXeMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThueXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fThueXe.Designer.cs">
+      <DependentUpon>fThueXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="Http.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +114,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fDanhSachXe.resx">
       <DependentUpon>fDanhSachXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLichSu.resx">
+      <DependentUpon>fLichSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMenu.resx">
+      <DependentUpon>fMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemXeMoi.resx">
+      <DependentUpon>fThemXeMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThueXe.resx">
+      <DependentUpon>fThueXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -87,7 +139,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-win-10-don-gian-37-scaled.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

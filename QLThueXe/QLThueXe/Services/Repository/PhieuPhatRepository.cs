@@ -10,7 +10,7 @@ namespace QLThueXe.Services.Repositor
     public  class PhieuPhatRepository
     {      
        
-        public string GetData()
+        public string GetData(int id)
         {
             
             string query = string.Format("select * from Test where id={0}", id);
