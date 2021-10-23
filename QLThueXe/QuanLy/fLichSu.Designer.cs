@@ -110,12 +110,13 @@ namespace QuanLy
             this.simpleButton1.Size = new System.Drawing.Size(113, 36);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Xem chi tiết";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(89, 23);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 25);
+            this.textBox1.Size = new System.Drawing.Size(139, 23);
             this.textBox1.TabIndex = 7;
             // 
             // dateTimePicker1

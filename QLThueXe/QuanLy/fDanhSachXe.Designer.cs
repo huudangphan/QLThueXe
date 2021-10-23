@@ -131,6 +131,7 @@ namespace QuanLy
             this.treeListColumn6.Caption = "Đã thuê";
             this.treeListColumn6.FieldName = "status";
             this.treeListColumn6.Name = "treeListColumn6";
+            this.treeListColumn6.OptionsColumn.AllowEdit = false;
             this.treeListColumn6.Visible = true;
             this.treeListColumn6.VisibleIndex = 4;
             // 
@@ -143,6 +144,7 @@ namespace QuanLy
             this.simpleButton1.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Lưu";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // fDanhSachXelayoutControl1ConvertedLayout
             // 
@@ -232,6 +234,7 @@ namespace QuanLy
             this.simpleButton2.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Thuê";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // layoutControlGroup1
             // 

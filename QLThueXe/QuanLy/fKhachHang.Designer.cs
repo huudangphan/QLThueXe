@@ -207,6 +207,7 @@ namespace QuanLy
             this.simpleButton3.StyleController = this.fKhachHanglayoutControl1ConvertedLayout;
             this.simpleButton3.TabIndex = 13;
             this.simpleButton3.Text = "Chọn";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton1
             // 

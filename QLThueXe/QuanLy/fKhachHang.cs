@@ -23,7 +23,23 @@ namespace QuanLy
             treeList1.DataSource = Global.LoadData<KhachHang>(kh,baseURL);
 
         }
-      
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Global.cmnd = treeList1.FocusedNode[0].ToString();
+                Global.tenkh= treeList1.FocusedNode[1].ToString();
+                Global.dia_chi= treeList1.FocusedNode[2].ToString();
+                Global.sdt= treeList1.FocusedNode[3].ToString();
+                MessageBox.Show("Chọn khách hàng thành công");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Xảy ra lỗi, vui lòng thử lại sau");
+            }
+        }
     }
     public class KhachHang
     {

@@ -34,6 +34,13 @@ namespace QuanLy
             }
             
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            fChiTietHD f = new fChiTietHD();
+            f.Show();
+            
+        }
     }
     class HopDong
     {

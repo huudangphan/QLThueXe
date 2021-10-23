@@ -30,88 +30,42 @@ namespace QuanLy
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThemXeMoi));
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.fThemXeMoilayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
+            this.cbHang = new System.Windows.Forms.ComboBox();
+            this.txtMaDangKiem = new System.Windows.Forms.TextBox();
+            this.txtTenXe = new System.Windows.Forms.TextBox();
+            this.txtGiaTHue = new System.Windows.Forms.TextBox();
+            this.txtBienKiemSoat = new System.Windows.Forms.TextBox();
+            this.simpleButton2item = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.comboBox1item = new DevExpress.XtraLayout.LayoutControlItem();
             this.textBox4item = new DevExpress.XtraLayout.LayoutControlItem();
             this.textBox3item = new DevExpress.XtraLayout.LayoutControlItem();
             this.textBox2item = new DevExpress.XtraLayout.LayoutControlItem();
             this.textBox1item = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton2item = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.fThemXeMoilayoutControl1ConvertedLayout)).BeginInit();
             this.fThemXeMoilayoutControl1ConvertedLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleButton2item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox1item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox4item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox3item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox2item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox1item)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleButton2item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(279, 70);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(264, 238);
-            this.simpleButton2.StyleController = this.fThemXeMoilayoutControl1ConvertedLayout;
-            this.simpleButton2.TabIndex = 6;
-            this.simpleButton2.Text = "Lưu";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(111, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 25);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(350, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 25);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(350, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 25);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(111, 71);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 25);
-            this.textBox4.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 24);
-            this.comboBox1.TabIndex = 12;
             // 
             // fThemXeMoilayoutControl1ConvertedLayout
             // 
             this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.simpleButton3);
-            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.comboBox1);
-            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.textBox4);
-            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.textBox3);
-            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.textBox2);
-            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.textBox1);
+            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.cbHang);
+            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.txtMaDangKiem);
+            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.txtTenXe);
+            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.txtGiaTHue);
+            this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.txtBienKiemSoat);
             this.fThemXeMoilayoutControl1ConvertedLayout.Controls.Add(this.simpleButton2);
             this.fThemXeMoilayoutControl1ConvertedLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fThemXeMoilayoutControl1ConvertedLayout.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -122,6 +76,53 @@ namespace QuanLy
             this.fThemXeMoilayoutControl1ConvertedLayout.Root = this.layoutControlGroup1;
             this.fThemXeMoilayoutControl1ConvertedLayout.Size = new System.Drawing.Size(555, 320);
             this.fThemXeMoilayoutControl1ConvertedLayout.TabIndex = 13;
+            // 
+            // cbHang
+            // 
+            this.cbHang.FormattingEnabled = true;
+            this.cbHang.Location = new System.Drawing.Point(102, 41);
+            this.cbHang.Name = "cbHang";
+            this.cbHang.Size = new System.Drawing.Size(145, 24);
+            this.cbHang.TabIndex = 12;
+            // 
+            // txtMaDangKiem
+            // 
+            this.txtMaDangKiem.Location = new System.Drawing.Point(102, 71);
+            this.txtMaDangKiem.Name = "txtMaDangKiem";
+            this.txtMaDangKiem.Size = new System.Drawing.Size(145, 25);
+            this.txtMaDangKiem.TabIndex = 11;
+            // 
+            // txtTenXe
+            // 
+            this.txtTenXe.Location = new System.Drawing.Point(341, 41);
+            this.txtTenXe.Name = "txtTenXe";
+            this.txtTenXe.Size = new System.Drawing.Size(202, 25);
+            this.txtTenXe.TabIndex = 10;
+            // 
+            // txtGiaTHue
+            // 
+            this.txtGiaTHue.Location = new System.Drawing.Point(341, 12);
+            this.txtGiaTHue.Name = "txtGiaTHue";
+            this.txtGiaTHue.Size = new System.Drawing.Size(202, 25);
+            this.txtGiaTHue.TabIndex = 9;
+            // 
+            // txtBienKiemSoat
+            // 
+            this.txtBienKiemSoat.Location = new System.Drawing.Point(102, 12);
+            this.txtBienKiemSoat.Name = "txtBienKiemSoat";
+            this.txtBienKiemSoat.Size = new System.Drawing.Size(145, 25);
+            this.txtBienKiemSoat.TabIndex = 7;
+            // 
+            // simpleButton2item
+            // 
+            this.simpleButton2item.Control = this.simpleButton2;
+            this.simpleButton2item.Location = new System.Drawing.Point(267, 58);
+            this.simpleButton2item.MinSize = new System.Drawing.Size(67, 40);
+            this.simpleButton2item.Name = "simpleButton2item";
+            this.simpleButton2item.Size = new System.Drawing.Size(268, 242);
+            this.simpleButton2item.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.simpleButton2item.TextSize = new System.Drawing.Size(0, 0);
+            this.simpleButton2item.TextVisible = false;
             // 
             // layoutControlGroup1
             // 
@@ -140,7 +141,7 @@ namespace QuanLy
             // 
             // comboBox1item
             // 
-            this.comboBox1item.Control = this.comboBox1;
+            this.comboBox1item.Control = this.cbHang;
             this.comboBox1item.Location = new System.Drawing.Point(0, 29);
             this.comboBox1item.Name = "comboBox1item";
             this.comboBox1item.Size = new System.Drawing.Size(239, 30);
@@ -150,7 +151,7 @@ namespace QuanLy
             // 
             // textBox4item
             // 
-            this.textBox4item.Control = this.textBox4;
+            this.textBox4item.Control = this.txtMaDangKiem;
             this.textBox4item.Location = new System.Drawing.Point(0, 59);
             this.textBox4item.Name = "textBox4item";
             this.textBox4item.Size = new System.Drawing.Size(239, 29);
@@ -160,7 +161,7 @@ namespace QuanLy
             // 
             // textBox3item
             // 
-            this.textBox3item.Control = this.textBox3;
+            this.textBox3item.Control = this.txtTenXe;
             this.textBox3item.Location = new System.Drawing.Point(239, 29);
             this.textBox3item.Name = "textBox3item";
             this.textBox3item.Size = new System.Drawing.Size(296, 59);
@@ -170,7 +171,7 @@ namespace QuanLy
             // 
             // textBox2item
             // 
-            this.textBox2item.Control = this.textBox2;
+            this.textBox2item.Control = this.txtGiaTHue;
             this.textBox2item.Location = new System.Drawing.Point(239, 0);
             this.textBox2item.Name = "textBox2item";
             this.textBox2item.Size = new System.Drawing.Size(296, 29);
@@ -180,24 +181,13 @@ namespace QuanLy
             // 
             // textBox1item
             // 
-            this.textBox1item.Control = this.textBox1;
+            this.textBox1item.Control = this.txtBienKiemSoat;
             this.textBox1item.Location = new System.Drawing.Point(0, 0);
             this.textBox1item.Name = "textBox1item";
             this.textBox1item.Size = new System.Drawing.Size(239, 29);
             this.textBox1item.Text = "Biển kiểm soát";
             this.textBox1item.TextLocation = DevExpress.Utils.Locations.Left;
             this.textBox1item.TextSize = new System.Drawing.Size(87, 17);
-            // 
-            // simpleButton2item
-            // 
-            this.simpleButton2item.Control = this.simpleButton2;
-            this.simpleButton2item.Location = new System.Drawing.Point(267, 58);
-            this.simpleButton2item.MinSize = new System.Drawing.Size(67, 40);
-            this.simpleButton2item.Name = "simpleButton2item";
-            this.simpleButton2item.Size = new System.Drawing.Size(268, 242);
-            this.simpleButton2item.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.simpleButton2item.TextSize = new System.Drawing.Size(0, 0);
-            this.simpleButton2item.TextVisible = false;
             // 
             // simpleButton3
             // 
@@ -208,6 +198,17 @@ namespace QuanLy
             this.simpleButton3.StyleController = this.fThemXeMoilayoutControl1ConvertedLayout;
             this.simpleButton3.TabIndex = 14;
             this.simpleButton3.Text = "Lưu";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(279, 70);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(264, 238);
+            this.simpleButton2.StyleController = this.fThemXeMoilayoutControl1ConvertedLayout;
+            this.simpleButton2.TabIndex = 6;
+            this.simpleButton2.Text = "Lưu";
             // 
             // layoutControlItem2
             // 
@@ -227,13 +228,13 @@ namespace QuanLy
             this.Size = new System.Drawing.Size(555, 320);
             ((System.ComponentModel.ISupportInitialize)(this.fThemXeMoilayoutControl1ConvertedLayout)).EndInit();
             this.fThemXeMoilayoutControl1ConvertedLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.simpleButton2item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox1item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox4item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox3item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox2item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox1item)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleButton2item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
@@ -244,11 +245,11 @@ namespace QuanLy
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraLayout.LayoutControl fThemXeMoilayoutControl1ConvertedLayout;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbHang;
+        private System.Windows.Forms.TextBox txtMaDangKiem;
+        private System.Windows.Forms.TextBox txtTenXe;
+        private System.Windows.Forms.TextBox txtGiaTHue;
+        private System.Windows.Forms.TextBox txtBienKiemSoat;
         private DevExpress.XtraLayout.LayoutControlItem simpleButton2item;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem comboBox1item;

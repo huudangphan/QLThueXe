@@ -76,3 +76,5 @@ D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.pdb
 D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fThemXeMoi.resources
 D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fThueXe.resources
 D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fLichSu.resources
+D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fCTHD.resources
+D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fChiTietHD.resources

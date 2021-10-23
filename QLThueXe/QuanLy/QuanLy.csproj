@@ -57,6 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fChiTietHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChiTietHD.Designer.cs">
+      <DependentUpon>fChiTietHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCTHD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fCTHD.Designer.cs">
+      <DependentUpon>fCTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDangNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,8 +119,15 @@
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Http.cs" />
+    <Compile Include="ModelXe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fChiTietHD.resx">
+      <DependentUpon>fChiTietHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCTHD.resx">
+      <DependentUpon>fCTHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>

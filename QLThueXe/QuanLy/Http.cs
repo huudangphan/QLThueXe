@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +28,8 @@ namespace QuanLy
                     using (var streamReader = new StreamReader(response.GetResponseStream()))
                     {
                          result = streamReader.ReadToEnd();
+                        var data = JsonConvert.DeserializeObject<List<dynamic>>(result);
+                       
                     }
                 }
                 return result;
@@ -35,7 +39,7 @@ namespace QuanLy
                 return ex.ToString();
             }
         }
-        public static string PUT(string urlbase, string token)
+        public static string PUT(string urlbase)
         {
             try
             {

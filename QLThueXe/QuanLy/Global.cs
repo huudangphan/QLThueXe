@@ -17,18 +17,13 @@ namespace QuanLy
             {
                 try
                 {
-
                     var json =  wc.DownloadString(url);
-
                     var data = JsonConvert.DeserializeObject<List<T>>(json);
-
                     return  data;
-
                 }
                 catch (Exception ex)
                 {
-                    return null;
-                  
+                    return null;                  
                 }
             }
         }
@@ -43,5 +38,14 @@ namespace QuanLy
             }
             return double.Parse(b);
         }
+        public static string tenkh { get; set; }
+        public static DateTime ngay_thue { get; set; }
+        public static string bien_so { get; set; }
+        public static string ten_xe { get; set; }
+        public static double gia_thue { get; set; }
+        public static string cmnd { get; set; }
+        public static string dia_chi { get; set; }
+        public static string sdt { get; set; }
+        public static DateTime ngay_sinh { get; set; }
     }
 }

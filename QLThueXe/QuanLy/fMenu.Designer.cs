@@ -42,6 +42,7 @@ namespace QuanLy
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -66,7 +67,8 @@ namespace QuanLy
             this.accordionControlElement4,
             this.accordionControlElement6,
             this.accordionControlElement7,
-            this.accordionControlElement8});
+            this.accordionControlElement8,
+            this.accordionControlElement9});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
@@ -138,6 +140,13 @@ namespace QuanLy
             this.fluentFormDefaultManager1.DockingEnabled = false;
             this.fluentFormDefaultManager1.Form = this;
             // 
+            // accordionControlElement9
+            // 
+            this.accordionControlElement9.Name = "accordionControlElement9";
+            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement9.Text = "Thuê xe";
+            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
+            // 
             // fMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -171,5 +180,6 @@ namespace QuanLy
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
     }
 }

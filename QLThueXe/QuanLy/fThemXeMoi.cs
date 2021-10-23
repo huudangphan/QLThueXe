@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,35 @@ namespace QuanLy
         public fThemXeMoi()
         {
             InitializeComponent();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                string bks = txtBienKiemSoat.Text;
+                string tenXe = txtTenXe.Text;
+                string madk = txtMaDangKiem.Text;
+                double giaThue = double.Parse(txtGiaTHue.Text);
+              
+                var result = Http.POST("https://localhost:44302/api/Xe/InsertDataXe?bien_so="+bks+"&id_hang=1&ten_xe="+tenXe+"&gia_thue="+giaThue+"&ma_ks="+madk+"&status=false");
+                var temp= JsonConvert.DeserializeObject<List<dynamic>>(result);
+                int result_inser = temp[0]["insert_xe"];
+                
+                if (result_inser == 100)
+                    MessageBox.Show("Biển kiểm soát bị trùng");
+                if (result_inser != 200)
+                    MessageBox.Show("Thêm dữ liệu thất bại");
+                else
+                    MessageBox.Show("Thêm dữ liệu thành công");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
