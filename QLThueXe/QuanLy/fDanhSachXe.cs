@@ -99,8 +99,8 @@ namespace QuanLy
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Xảy ra lỗi, vui lòng thử lại");
+                string error = ex.Message.ToString();
+                MessageBox.Show("Ngưừi dùng không có quyền chỉnh sửa thông tin xe!");
             }
           
         }

@@ -28,7 +28,7 @@ namespace QuanLy
                     using (var streamReader = new StreamReader(response.GetResponseStream()))
                     {
                          result = streamReader.ReadToEnd();
-                        var data = JsonConvert.DeserializeObject<List<dynamic>>(result);
+                        //var data = JsonConvert.DeserializeObject<List<dynamic>>(result);
                        
                     }
                 }

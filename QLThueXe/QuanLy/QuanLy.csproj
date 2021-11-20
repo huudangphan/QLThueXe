@@ -63,12 +63,6 @@
     <Compile Include="fChiTietHD.Designer.cs">
       <DependentUpon>fChiTietHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="fCTHD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="fCTHD.Designer.cs">
-      <DependentUpon>fCTHD.cs</DependentUpon>
-    </Compile>
     <Compile Include="fDangNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +87,12 @@
     <Compile Include="fLichSu.Designer.cs">
       <DependentUpon>fLichSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +104,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fThemKhachHang.Designer.cs">
+      <DependentUpon>fThemKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="fThemXeMoi.cs">
       <SubType>UserControl</SubType>
@@ -125,9 +131,6 @@
     <EmbeddedResource Include="fChiTietHD.resx">
       <DependentUpon>fChiTietHD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fCTHD.resx">
-      <DependentUpon>fCTHD.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,8 +143,14 @@
     <EmbeddedResource Include="fLichSu.resx">
       <DependentUpon>fLichSu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fMenu.resx">
       <DependentUpon>fMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemKhachHang.resx">
+      <DependentUpon>fThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemXeMoi.resx">
       <DependentUpon>fThemXeMoi.cs</DependentUpon>

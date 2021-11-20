@@ -41,7 +41,7 @@ namespace QuanLy
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(228, 138);
+            this.labelControl1.Location = new System.Drawing.Point(123, 118);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(93, 17);
             this.labelControl1.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace QuanLy
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(228, 242);
+            this.labelControl2.Location = new System.Drawing.Point(123, 222);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 17);
             this.labelControl2.TabIndex = 1;
@@ -57,14 +57,14 @@ namespace QuanLy
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(428, 135);
+            this.textEdit1.Location = new System.Drawing.Point(323, 115);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(199, 22);
             this.textEdit1.TabIndex = 2;
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(428, 239);
+            this.textEdit2.Location = new System.Drawing.Point(323, 219);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(199, 22);
             this.textEdit2.TabIndex = 3;
@@ -72,11 +72,12 @@ namespace QuanLy
             // btnDangNhap
             // 
             this.btnDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.Image")));
-            this.btnDangNhap.Location = new System.Drawing.Point(428, 305);
+            this.btnDangNhap.Location = new System.Drawing.Point(323, 285);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(115, 44);
             this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // fDangNhap
             // 
@@ -88,7 +89,7 @@ namespace QuanLy
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "fDangNhap";
-            this.Size = new System.Drawing.Size(697, 439);
+            this.Size = new System.Drawing.Size(677, 439);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             this.ResumeLayout(false);

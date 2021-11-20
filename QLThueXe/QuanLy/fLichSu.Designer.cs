@@ -96,8 +96,8 @@ namespace QuanLy
             // 
             // treeListColumn5
             // 
-            this.treeListColumn5.Caption = "Ngày trả dự tính";
-            this.treeListColumn5.FieldName = "ngay_tra_du_tinh";
+            this.treeListColumn5.Caption = "Thời gian thuê";
+            this.treeListColumn5.FieldName = "so_ngay_muon";
             this.treeListColumn5.Name = "treeListColumn5";
             this.treeListColumn5.Visible = true;
             this.treeListColumn5.VisibleIndex = 4;

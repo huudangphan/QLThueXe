@@ -28,10 +28,21 @@ namespace QLThueXe.Services.Repository
             string query = string.Format(@"select * from insert_ct_hop_dong('{0}',{1},{2})", bien_so, gia_thue, so_ngay);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string UpdateHopDong(int id,DateTime ngay_tra)
+        public string UpdateHopDong(int id)
         {
-            string query = string.Format(@"select * from  update_hop_dong({0},'{1}')", id, ngay_tra);
+            string query = string.Format(@"select * from  update_hop_dong({0})", id);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
+        public string Search_ct_hop_dong_byid(int id)
+        {
+            string query = string.Format("select * from search_ct_hop_dong_byid({0})",id);
+            return DataBaseServices.Instance.ExecuteQuery(query);
+        }
+        public string Search_phieu_phat_by_id(int id)
+        {
+            string query = string.Format("select * from search_phieu_phat_byid({0})", id);
+            return DataBaseServices.Instance.ExecuteQuery(query);
+        }
+        
     }
 }

@@ -47,5 +47,6 @@ namespace QuanLy
         public static string dia_chi { get; set; }
         public static string sdt { get; set; }
         public static DateTime ngay_sinh { get; set; }
+        public static int id_hop_dong { get; set; }
     }
 }

@@ -53,7 +53,8 @@ namespace QuanLy
                     int result_update = temp[0]["insert_hop_dong"];
                     foreach (var item in fDanhSachXe.lstXe)
                     {
-                        
+                        string temp_url = "https://localhost:44302/api/HopDong/InsertCTHD?bien_so="+item.bien_so+"&gia_thue="+item.gia_thue+"&so_ngay="+so_ngay;
+                        Http.POST(temp_url);
                     }
                     if (result_update != 200)
                         MessageBox.Show("Thuê xe thất bại");

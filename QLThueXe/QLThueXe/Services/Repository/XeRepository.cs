@@ -11,9 +11,10 @@ namespace QLThueXe.Services.Repository
         
         public string InsertData(string bien_so,int id_hang,string ten_xe,double gia_thue,string ma_ks,bool status)
         {
-            string query = string.Format("select *  from insert_xe('{0}',{1},'{2}',{3},'{4}',{5})", bien_so, id_hang, ten_xe, gia_thue, ma_ks,status);
+            string query = string.Format(" select *  from insert_xe('{0}',{1},'{2}',{3},'{4}',{5}) commit", bien_so, id_hang, ten_xe, gia_thue, ma_ks,status);
             try
             {
+                DataBaseServices.Instance.ExecuteQuery("begin");
                 return DataBaseServices.Instance.ExecuteQuery(query);
             }
             catch (Exception ex)
@@ -33,9 +34,10 @@ namespace QLThueXe.Services.Repository
             if (gia_thue==0)
                 gia_thue = -1;
 
-            string query = string.Format("select * from search_xe('{0}',{1},'{2}',{3},'{4}',{5})", bien_so, id_hang, ten_xe, gia_thue, ma_ks,status);
+            string query = string.Format("  select * from search_xe('{0}',{1},'{2}',{3},'{4}',{5}) commit", bien_so, id_hang, ten_xe, gia_thue, ma_ks,status);
             try
             {
+                DataBaseServices.Instance.ExecuteQuery("begin set transaction isolation level repeatable");
                 return DataBaseServices.Instance.ExecuteQuery(query);
             }
             catch (Exception ex)
@@ -47,9 +49,11 @@ namespace QLThueXe.Services.Repository
         }
         public string UpdateXe(string bien_so,double gia_thue,bool status)
         {
-            string query = string.Format("select * from update_xe('{0}',{1},{2})", bien_so, gia_thue,status);
+            string query = string.Format(" select * from update_xe('{0}',{1},{2}) commit", bien_so, gia_thue,status);
             try
             {
+                DataBaseServices.Instance.ExecuteQuery("begin");
+
                 return DataBaseServices.Instance.ExecuteQuery(query);
             }
             catch (Exception)

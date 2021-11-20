@@ -60,5 +60,13 @@ namespace QuanLy
             f.Dock = DockStyle.Fill;
             fMain.Controls.Add(f);
         }
+
+        private void accordionControlElement10_Click(object sender, EventArgs e)
+        {
+            fMain.Controls.Clear();
+            fThemKhachHang f = new fThemKhachHang();
+            f.Dock = DockStyle.Fill;
+            fMain.Controls.Add(f);
+        }
     }
 }

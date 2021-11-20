@@ -11,7 +11,7 @@ namespace QLThueXe.Connection
 {
     public  class DataBaseServices 
     {
-        public string conStr = @"Server=192.168.50.102;Port=5432;User Id=postgres;Password=24122021;Database=MyDB";
+        public static string conStr = @"";
 
         private static DataBaseServices instance; 
 

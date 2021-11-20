@@ -33,9 +33,19 @@ namespace QLThueXe.Controllers
             return db.InsertCTHD(bien_so, gia_thue, so_ngay);
         }
         [HttpPost]
-        public string UpdateHopDong(int id,DateTime ngay_tra)
+        public string UpdateHopDong(int id)
         {
-            return db.UpdateHopDong(id, ngay_tra);
+            return db.UpdateHopDong(id);
+        }
+        [HttpGet]
+        public string SearchCTHD(int id)
+        {
+            return db.Search_ct_hop_dong_byid(id);
+        }
+        [HttpGet]
+        public string SearchPhieuPhat(int id)
+        {
+            return db.Search_phieu_phat_by_id(id);
         }
     }
 }
