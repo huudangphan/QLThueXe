@@ -10,5 +10,7 @@ namespace QuanLy
     {
         public  string bien_so { get; set; }
         public  double gia_thue { get; set; }
+        public int so_ngay_thue { get; set; }
+        public int km_hien_tai { get; set; }
     }
 }

@@ -13,6 +13,8 @@ namespace QLThueXe.Connection
     {
         public static string conStr = @"";
 
+
+
         private static DataBaseServices instance; 
 
         public static DataBaseServices Instance

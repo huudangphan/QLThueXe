@@ -7,40 +7,42 @@ namespace QLThueXe.Services.Repository
 {
     public class HopDongRepository
     {
-        public string InsertHopDong(bool tinh_trang,int so_ngay,string cmnd)
+        public string InsertHopDong(DateTime ngay_thue,string cmnd,double tien_coc)
         {
-            string query = string.Format("select * from insert_hop_dong({0},'{1}','{2}')",   tinh_trang,so_ngay,cmnd);
+            string query = string.Format("select * from insert_hop_dong('{0}','{1}',{2})",   ngay_thue,cmnd,tien_coc);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string SearchHopDong(DateTime _from_ngay_thue,DateTime _to_ngay_thue,DateTime _from_ngay_tra,DateTime _to_ngay_tra,bool _tinh_trang)
+        public string SearchHopDong(string cmnd)
         {
-            string query = string.Format("select * from search_hop_dong('{0}','{1}','{2}','{3}','{4}')", _from_ngay_thue, _to_ngay_thue, _from_ngay_tra, _to_ngay_tra, _tinh_trang) ;
+            string query = string.Format("select * from search_hop_dong('{0}')", cmnd) ;
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string ChiTietHopDong(int id)
+        public string ChiTietHopDong(string id)
         {
-            string query = string.Format(@"select * from ct_hop_dong ct,(select * from hop_dong hd join khach k on hd.cmnd= hd.cmnd where id_hop_dong={0}) _hd
-	where _hd.id_hop_dong=ct.id_hop_dong",id);
+            //           string query = string.Format(@"select * from ct_hop_dong ct,(select * from hop_dong hd join khach k on hd.cmnd= hd.cmnd where id_hop_dong={0}) _hd
+            //where _hd.id_hop_dong=ct.id_hop_dong",id);
+            string query = string.Format("select * from search_ct_hop_dong_byid('{0}')", id);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string InsertCTHD(string bien_so,double gia_thue,int so_ngay)
+        //select * from insert_ct_hop_dong('19H',23434,5,'0001-01-01',140232)
+        public string InsertCTHD(string bien_so,double gia_thue,int so_ngay,int km_hien_tai)
         {
-            string query = string.Format(@"select * from insert_ct_hop_dong('{0}',{1},{2})", bien_so, gia_thue, so_ngay);
+            string query = string.Format(@"select * from insert_ct_hop_dong('{0}',{1},{2},'{3}',{4})", bien_so, gia_thue, so_ngay,"0001-01-01",km_hien_tai);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string UpdateHopDong(int id)
+        public string UpdateHopDong(string id_hop_dong,int km_tra,string bien_so)
         {
-            string query = string.Format(@"select * from  update_hop_dong({0})", id);
+            string query = string.Format(@"select * from  update_hop_dong('{0}',{1},'{2}')", id_hop_dong,km_tra,bien_so);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string Search_ct_hop_dong_byid(int id)
+        public string Search_ct_hop_dong_byid(string id)
         {
-            string query = string.Format("select * from search_ct_hop_dong_byid({0})",id);
+            string query = string.Format("select * from search_ct_hop_dong_byid('{0}')",id);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string Search_phieu_phat_by_id(int id)
+        public string Search_phieu_phat_by_id(string id)
         {
-            string query = string.Format("select * from search_phieu_phat_byid({0})", id);
+            string query = string.Format("select * from search_phieu_phat_byid('{0}')", id);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
         

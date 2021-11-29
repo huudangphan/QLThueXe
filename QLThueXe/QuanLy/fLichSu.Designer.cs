@@ -33,7 +33,6 @@ namespace QuanLy
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.treeListColumn3 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn4 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn5 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -54,7 +53,6 @@ namespace QuanLy
             this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.treeListColumn1,
             this.treeListColumn2,
-            this.treeListColumn3,
             this.treeListColumn4,
             this.treeListColumn5});
             this.treeList1.Location = new System.Drawing.Point(12, 127);
@@ -78,29 +76,21 @@ namespace QuanLy
             this.treeListColumn2.Visible = true;
             this.treeListColumn2.VisibleIndex = 1;
             // 
-            // treeListColumn3
-            // 
-            this.treeListColumn3.Caption = "Ngày trả";
-            this.treeListColumn3.FieldName = "ngay_tra";
-            this.treeListColumn3.Name = "treeListColumn3";
-            this.treeListColumn3.Visible = true;
-            this.treeListColumn3.VisibleIndex = 2;
-            // 
             // treeListColumn4
             // 
-            this.treeListColumn4.Caption = "Đã trả";
-            this.treeListColumn4.FieldName = "tinh_trang";
+            this.treeListColumn4.Caption = "Tiền cọc";
+            this.treeListColumn4.FieldName = "tien_coc";
             this.treeListColumn4.Name = "treeListColumn4";
             this.treeListColumn4.Visible = true;
-            this.treeListColumn4.VisibleIndex = 3;
+            this.treeListColumn4.VisibleIndex = 2;
             // 
             // treeListColumn5
             // 
-            this.treeListColumn5.Caption = "Thời gian thuê";
-            this.treeListColumn5.FieldName = "so_ngay_muon";
+            this.treeListColumn5.Caption = "Cmnd";
+            this.treeListColumn5.FieldName = "cmnd";
             this.treeListColumn5.Name = "treeListColumn5";
             this.treeListColumn5.Visible = true;
-            this.treeListColumn5.VisibleIndex = 4;
+            this.treeListColumn5.VisibleIndex = 3;
             // 
             // simpleButton1
             // 
@@ -217,7 +207,6 @@ namespace QuanLy
         private DevExpress.XtraTreeList.TreeList treeList1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn3;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn4;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn5;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;

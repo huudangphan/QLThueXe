@@ -13,37 +13,37 @@ namespace QLThueXe.Controllers
     {
         HopDongRepository db = new HopDongRepository();
         [HttpPost]
-        public string InsertHopDong(  bool tinh_trang,int so_ngay,string cmnd)
+        public string InsertHopDong(DateTime ngay_thue, string cmnd, double tien_coc)
         {
-            return db.InsertHopDong(  tinh_trang,so_ngay,cmnd);
+            return db.InsertHopDong(  ngay_thue,cmnd,tien_coc);
         }
         [HttpGet]
-        public string SearchHopDong(DateTime _from_ngay_thue, DateTime _to_ngay_thue, DateTime _from_ngay_tra, DateTime _to_ngay_tra, bool _tinh_trang)
+        public string SearchHopDong(string cmnd)
         {
-            return db.SearchHopDong(_from_ngay_thue, _to_ngay_thue, _from_ngay_tra, _to_ngay_tra, _tinh_trang);
+            return db.SearchHopDong(cmnd);
         }
         [HttpGet]
-        public string CTHopDOng(int id)
+        public string CTHopDOng(string id)
         {
             return db.ChiTietHopDong(id);
         }
         [HttpPost]
-        public string InsertCTHD(string bien_so,double gia_thue,int so_ngay)
+        public string InsertCTHD(string bien_so, double gia_thue, int so_ngay, int km_hien_tai)
         {
-            return db.InsertCTHD(bien_so, gia_thue, so_ngay);
+            return db.InsertCTHD(bien_so, gia_thue, so_ngay,km_hien_tai);
         }
         [HttpPost]
-        public string UpdateHopDong(int id)
+        public string UpdateHopDong(string id_hop_dong, int km_tra, string bien_so)
         {
-            return db.UpdateHopDong(id);
+            return db.UpdateHopDong(id_hop_dong,km_tra,bien_so);
         }
         [HttpGet]
-        public string SearchCTHD(int id)
+        public string SearchCTHD(string id)
         {
             return db.Search_ct_hop_dong_byid(id);
         }
         [HttpGet]
-        public string SearchPhieuPhat(int id)
+        public string SearchPhieuPhat(string id)
         {
             return db.Search_phieu_phat_by_id(id);
         }

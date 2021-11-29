@@ -26,7 +26,8 @@ namespace QLThueXe.Services.Repository
         }
         public string DangNhap(string username,string password)
         {
-            DataBaseServices.conStr = String.Format("Server=192.168.1.20;Port=5432;User Id={0};Password={1};Database=MyDB", username, password);
+            //Server=localhost;Port=5432;User Id=postgres;Password=24122021;Database=MyDB;Pooling=false;Timeout=300;CommandTimeout=300
+            DataBaseServices.conStr = String.Format("Server=localhost;Port=5432;User Id={0};Password={1};Database=MyDB", username, password);
             return DataBaseServices.Instance.ExecuteQuery("select 1 ");
         }
         public void ThemTaiKhoan(string username,string password)

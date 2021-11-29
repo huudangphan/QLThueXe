@@ -22,6 +22,7 @@ namespace QuanLy
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
             fMain.Controls.Clear();
+            
             fDanhSachXe f = new fDanhSachXe();
             f.Dock = DockStyle.Fill;
             fMain.Controls.Add(f);

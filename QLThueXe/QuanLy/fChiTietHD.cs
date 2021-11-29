@@ -18,7 +18,7 @@ namespace QuanLy
         {
             InitializeComponent();
             LoadData();
-            CheckPhat();
+            //CheckPhat();
 
         }
         public void LoadData()

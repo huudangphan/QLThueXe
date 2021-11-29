@@ -115,17 +115,15 @@ namespace QuanLy
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(968, 41);
+            this.barDockControlTop.Size = new System.Drawing.Size(830, 41);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 580);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 468);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(968, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(830, 20);
             // 
             // barDockControlLeft
             // 
@@ -133,24 +131,24 @@ namespace QuanLy
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 539);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 427);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(968, 41);
+            this.barDockControlRight.Location = new System.Drawing.Point(830, 41);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 539);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 427);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.treeList2);
-            this.groupBox2.Location = new System.Drawing.Point(46, 309);
+            this.groupBox2.Location = new System.Drawing.Point(39, 251);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(883, 227);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(757, 184);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin Hợp đồng";
@@ -166,90 +164,103 @@ namespace QuanLy
             this.treeListColumn11,
             this.treeListColumn12,
             this.tong_tien});
-            this.treeList2.Location = new System.Drawing.Point(18, 50);
+            this.treeList2.Location = new System.Drawing.Point(15, 41);
+            this.treeList2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeList2.MenuManager = this.barManager1;
+            this.treeList2.MinWidth = 17;
             this.treeList2.Name = "treeList2";
-            this.treeList2.Size = new System.Drawing.Size(847, 161);
+            this.treeList2.Size = new System.Drawing.Size(726, 131);
             this.treeList2.TabIndex = 0;
+            this.treeList2.TreeLevelWidth = 15;
             // 
             // id_hop_dong
             // 
             this.id_hop_dong.Caption = "Id";
             this.id_hop_dong.FieldName = "Id";
+            this.id_hop_dong.MinWidth = 17;
             this.id_hop_dong.Name = "id_hop_dong";
             this.id_hop_dong.Visible = true;
             this.id_hop_dong.VisibleIndex = 0;
-            this.id_hop_dong.Width = 50;
+            this.id_hop_dong.Width = 43;
             // 
             // treeListColumn7
             // 
             this.treeListColumn7.Caption = "Ngày thuê";
             this.treeListColumn7.FieldName = "ngay_thue";
+            this.treeListColumn7.MinWidth = 17;
             this.treeListColumn7.Name = "treeListColumn7";
             this.treeListColumn7.Visible = true;
             this.treeListColumn7.VisibleIndex = 1;
-            this.treeListColumn7.Width = 110;
+            this.treeListColumn7.Width = 94;
             // 
             // treeListColumn8
             // 
             this.treeListColumn8.Caption = "Ngày trả";
             this.treeListColumn8.FieldName = "ngay_tra";
+            this.treeListColumn8.MinWidth = 17;
             this.treeListColumn8.Name = "treeListColumn8";
             this.treeListColumn8.Visible = true;
             this.treeListColumn8.VisibleIndex = 2;
-            this.treeListColumn8.Width = 110;
+            this.treeListColumn8.Width = 94;
             // 
             // treeListColumn9
             // 
             this.treeListColumn9.Caption = "Đã trả";
             this.treeListColumn9.FieldName = "tinh_trang";
+            this.treeListColumn9.MinWidth = 17;
             this.treeListColumn9.Name = "treeListColumn9";
             this.treeListColumn9.Visible = true;
             this.treeListColumn9.VisibleIndex = 3;
-            this.treeListColumn9.Width = 110;
+            this.treeListColumn9.Width = 94;
             // 
             // bien_so_hd
             // 
             this.bien_so_hd.Caption = "Biển số";
             this.bien_so_hd.FieldName = "Biển số";
+            this.bien_so_hd.MinWidth = 17;
             this.bien_so_hd.Name = "bien_so_hd";
             this.bien_so_hd.Visible = true;
             this.bien_so_hd.VisibleIndex = 4;
-            this.bien_so_hd.Width = 110;
+            this.bien_so_hd.Width = 94;
             // 
             // treeListColumn11
             // 
             this.treeListColumn11.Caption = "Giá thuê";
             this.treeListColumn11.FieldName = "gia_thue";
+            this.treeListColumn11.MinWidth = 17;
             this.treeListColumn11.Name = "treeListColumn11";
             this.treeListColumn11.Visible = true;
             this.treeListColumn11.VisibleIndex = 5;
-            this.treeListColumn11.Width = 109;
+            this.treeListColumn11.Width = 93;
             // 
             // treeListColumn12
             // 
             this.treeListColumn12.Caption = "Số ngày thuê";
             this.treeListColumn12.FieldName = "so_ngay_thue";
+            this.treeListColumn12.MinWidth = 17;
             this.treeListColumn12.Name = "treeListColumn12";
             this.treeListColumn12.Visible = true;
             this.treeListColumn12.VisibleIndex = 6;
-            this.treeListColumn12.Width = 109;
+            this.treeListColumn12.Width = 93;
             // 
             // tong_tien
             // 
             this.tong_tien.Caption = "Tổng tiền";
             this.tong_tien.FieldName = "Tổng tiền";
+            this.tong_tien.MinWidth = 17;
             this.tong_tien.Name = "tong_tien";
             this.tong_tien.Visible = true;
             this.tong_tien.VisibleIndex = 7;
-            this.tong_tien.Width = 109;
+            this.tong_tien.Width = 93;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.treeList1);
-            this.groupBox1.Location = new System.Drawing.Point(46, 48);
+            this.groupBox1.Location = new System.Drawing.Point(39, 39);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(883, 241);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(757, 196);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
@@ -262,57 +273,71 @@ namespace QuanLy
             this.treeListColumn3,
             this.treeListColumn4,
             this.treeListColumn5});
-            this.treeList1.Location = new System.Drawing.Point(18, 57);
+            this.treeList1.Location = new System.Drawing.Point(15, 46);
+            this.treeList1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.treeList1.MinWidth = 17;
             this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(847, 127);
+            this.treeList1.Size = new System.Drawing.Size(726, 103);
             this.treeList1.TabIndex = 1;
+            this.treeList1.TreeLevelWidth = 15;
             // 
             // treeListColumn1
             // 
             this.treeListColumn1.Caption = "CMND";
             this.treeListColumn1.FieldName = "cmnd";
+            this.treeListColumn1.MinWidth = 17;
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.Visible = true;
             this.treeListColumn1.VisibleIndex = 0;
+            this.treeListColumn1.Width = 64;
             // 
             // treeListColumn2
             // 
             this.treeListColumn2.Caption = "Tên khách hàng";
             this.treeListColumn2.FieldName = "ten";
+            this.treeListColumn2.MinWidth = 17;
             this.treeListColumn2.Name = "treeListColumn2";
             this.treeListColumn2.Visible = true;
             this.treeListColumn2.VisibleIndex = 1;
+            this.treeListColumn2.Width = 64;
             // 
             // treeListColumn3
             // 
             this.treeListColumn3.Caption = "Địa chỉ";
             this.treeListColumn3.FieldName = "dia_chi";
+            this.treeListColumn3.MinWidth = 17;
             this.treeListColumn3.Name = "treeListColumn3";
             this.treeListColumn3.Visible = true;
             this.treeListColumn3.VisibleIndex = 2;
+            this.treeListColumn3.Width = 64;
             // 
             // treeListColumn4
             // 
             this.treeListColumn4.Caption = "SĐT";
             this.treeListColumn4.FieldName = "sdt";
+            this.treeListColumn4.MinWidth = 17;
             this.treeListColumn4.Name = "treeListColumn4";
             this.treeListColumn4.Visible = true;
             this.treeListColumn4.VisibleIndex = 3;
+            this.treeListColumn4.Width = 64;
             // 
             // treeListColumn5
             // 
             this.treeListColumn5.Caption = "Ngày sinh";
             this.treeListColumn5.FieldName = "ngay_sinh";
+            this.treeListColumn5.MinWidth = 17;
             this.treeListColumn5.Name = "treeListColumn5";
             this.treeListColumn5.Visible = true;
             this.treeListColumn5.VisibleIndex = 4;
+            this.treeListColumn5.Width = 64;
             // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(835, 542);
+            this.simpleButton1.Location = new System.Drawing.Point(716, 440);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 46);
+            this.simpleButton1.Size = new System.Drawing.Size(81, 37);
             this.simpleButton1.TabIndex = 10;
             this.simpleButton1.Text = "Trả";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -320,17 +345,18 @@ namespace QuanLy
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(715, 542);
+            this.simpleButton2.Location = new System.Drawing.Point(613, 440);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(114, 46);
+            this.simpleButton2.Size = new System.Drawing.Size(98, 37);
             this.simpleButton2.TabIndex = 11;
             this.simpleButton2.Text = "Phiếu phạt";
             // 
             // fChiTietHD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 600);
+            this.ClientSize = new System.Drawing.Size(830, 488);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.groupBox2);
@@ -339,7 +365,6 @@ namespace QuanLy
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fChiTietHD";
             this.Text = "Chi tiết hợp đồng";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

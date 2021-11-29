@@ -37,7 +37,7 @@ namespace QuanLy
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Global.id_hop_dong = Int32.Parse(treeList1.FocusedNode[0].ToString());
+            Global.id_hop_dong = (treeList1.FocusedNode[0].ToString());
             fChiTietHD f = new fChiTietHD();
             f.Show();
             
@@ -45,12 +45,13 @@ namespace QuanLy
     }
     class HopDong
     {
-        public int id_hop_dong { get; set; }
-        public DateTime ngay_thue { get; set; }
-        public DateTime ngay_tra { get; set; }
-        public bool tinh_trang { get; set; }
+      
+        public DateTime ngay_thue { get; set; }      
+        
         public string cmnd { get; set; }
-        public int so_ngay_muon { get; set; }
+        public double tien_coc { get; set; }
+        public string id_hop_dong { get; set; }
+
     }
        
 
