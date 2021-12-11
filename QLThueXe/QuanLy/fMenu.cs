@@ -16,7 +16,7 @@ namespace QuanLy
         public fMenu()
         {
             InitializeComponent();
-            
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
@@ -69,5 +69,23 @@ namespace QuanLy
             f.Dock = DockStyle.Fill;
             fMain.Controls.Add(f);
         }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+            //Global.id_hop_dong = "23156621456hd25";
+            //Global.bien_so = "79A-12624";
+            //fMain.Controls.Clear();
+            //fHoaDon f = new fHoaDon();
+            //f.Dock = DockStyle.Fill;
+            //fMain.Controls.Add(f);
+        }
+
+        private void accordionControlElement14_Click(object sender, EventArgs e)
+        {
+            Global.id_hop_dong = "23156621456hd25";
+            Global.bien_so = "79A-12624";
+
+        }
+      
     }
 }

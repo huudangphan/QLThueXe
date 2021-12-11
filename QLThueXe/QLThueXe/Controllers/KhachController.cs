@@ -24,7 +24,7 @@ namespace QLThueXe.Controllers
             return db.GetKhach(cmnd, ten, dia_chi, sdt, ngay_sinh, anh);
         }
         [HttpGet]
-        public string GetKhachById(int id_hop_dong)
+        public string GetKhachById(string id_hop_dong)
         {
             return db.GetKhachByID(id_hop_dong);
         }

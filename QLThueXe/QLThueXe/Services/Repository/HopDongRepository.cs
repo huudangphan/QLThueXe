@@ -42,9 +42,13 @@ namespace QLThueXe.Services.Repository
         }
         public string Search_phieu_phat_by_id(string id)
         {
-            string query = string.Format("select * from search_phieu_phat_byid('{0}')", id);
+            string query = string.Format("select * from search_phieu_phat_byid({0})", id);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        
+        public string Search_Hoa_Don(string id_hop_dong,string bien_so)
+        {
+            string query = string.Format("select * from search_hoa_don('{0}','{1}')",id_hop_dong,bien_so);
+            return DataBaseServices.Instance.ExecuteQuery(query);
+        }
     }
 }

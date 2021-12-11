@@ -44,11 +44,11 @@ namespace QuanLy
             this.id_hop_dong = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn7 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn8 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.treeListColumn9 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.bien_so_hd = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn11 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn12 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.tong_tien = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.treeListColumn6 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
@@ -57,7 +57,9 @@ namespace QuanLy
             this.treeListColumn4 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn5 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.treeListColumn9 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeList2)).BeginInit();
@@ -159,11 +161,12 @@ namespace QuanLy
             this.id_hop_dong,
             this.treeListColumn7,
             this.treeListColumn8,
-            this.treeListColumn9,
             this.bien_so_hd,
             this.treeListColumn11,
             this.treeListColumn12,
-            this.tong_tien});
+            this.tong_tien,
+            this.treeListColumn6,
+            this.treeListColumn9});
             this.treeList2.Location = new System.Drawing.Point(15, 41);
             this.treeList2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeList2.MenuManager = this.barManager1;
@@ -203,24 +206,14 @@ namespace QuanLy
             this.treeListColumn8.VisibleIndex = 2;
             this.treeListColumn8.Width = 94;
             // 
-            // treeListColumn9
-            // 
-            this.treeListColumn9.Caption = "Đã trả";
-            this.treeListColumn9.FieldName = "tinh_trang";
-            this.treeListColumn9.MinWidth = 17;
-            this.treeListColumn9.Name = "treeListColumn9";
-            this.treeListColumn9.Visible = true;
-            this.treeListColumn9.VisibleIndex = 3;
-            this.treeListColumn9.Width = 94;
-            // 
             // bien_so_hd
             // 
             this.bien_so_hd.Caption = "Biển số";
-            this.bien_so_hd.FieldName = "Biển số";
+            this.bien_so_hd.FieldName = "bien_so_hd";
             this.bien_so_hd.MinWidth = 17;
             this.bien_so_hd.Name = "bien_so_hd";
             this.bien_so_hd.Visible = true;
-            this.bien_so_hd.VisibleIndex = 4;
+            this.bien_so_hd.VisibleIndex = 3;
             this.bien_so_hd.Width = 94;
             // 
             // treeListColumn11
@@ -230,7 +223,7 @@ namespace QuanLy
             this.treeListColumn11.MinWidth = 17;
             this.treeListColumn11.Name = "treeListColumn11";
             this.treeListColumn11.Visible = true;
-            this.treeListColumn11.VisibleIndex = 5;
+            this.treeListColumn11.VisibleIndex = 4;
             this.treeListColumn11.Width = 93;
             // 
             // treeListColumn12
@@ -240,18 +233,28 @@ namespace QuanLy
             this.treeListColumn12.MinWidth = 17;
             this.treeListColumn12.Name = "treeListColumn12";
             this.treeListColumn12.Visible = true;
-            this.treeListColumn12.VisibleIndex = 6;
+            this.treeListColumn12.VisibleIndex = 5;
             this.treeListColumn12.Width = 93;
             // 
             // tong_tien
             // 
             this.tong_tien.Caption = "Tổng tiền";
-            this.tong_tien.FieldName = "Tổng tiền";
+            this.tong_tien.FieldName = "tong_tien";
             this.tong_tien.MinWidth = 17;
             this.tong_tien.Name = "tong_tien";
             this.tong_tien.Visible = true;
-            this.tong_tien.VisibleIndex = 7;
+            this.tong_tien.VisibleIndex = 6;
             this.tong_tien.Width = 93;
+            // 
+            // treeListColumn6
+            // 
+            this.treeListColumn6.Caption = "Đã trả";
+            this.treeListColumn6.FieldName = "status";
+            this.treeListColumn6.MinWidth = 17;
+            this.treeListColumn6.Name = "treeListColumn6";
+            this.treeListColumn6.Visible = true;
+            this.treeListColumn6.VisibleIndex = 7;
+            this.treeListColumn6.Width = 64;
             // 
             // groupBox1
             // 
@@ -342,22 +345,38 @@ namespace QuanLy
             this.simpleButton1.Text = "Trả";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton2
+            // label1
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(613, 440);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(98, 37);
-            this.simpleButton2.TabIndex = 11;
-            this.simpleButton2.Text = "Phiếu phạt";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(454, 450);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Km khi trả";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(531, 448);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 21);
+            this.textBox1.TabIndex = 16;
+            // 
+            // treeListColumn9
+            // 
+            this.treeListColumn9.Caption = "Số km khi thuê";
+            this.treeListColumn9.FieldName = "km_hien_tai";
+            this.treeListColumn9.Name = "treeListColumn9";
+            this.treeListColumn9.Visible = true;
+            this.treeListColumn9.VisibleIndex = 8;
             // 
             // fChiTietHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 488);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -399,12 +418,14 @@ namespace QuanLy
         private DevExpress.XtraTreeList.Columns.TreeListColumn id_hop_dong;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn7;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn8;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn9;
         private DevExpress.XtraTreeList.Columns.TreeListColumn bien_so_hd;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn11;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn12;
         private DevExpress.XtraTreeList.Columns.TreeListColumn tong_tien;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn6;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn9;
     }
 }

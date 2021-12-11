@@ -41,49 +41,72 @@ namespace QuanLy
             }
 
         }
-
+        public bool Check()
+        {
+            if(textBox1.Text=="")
+            {
+                MessageBox.Show("Vui lòng nhập số công tơ khi trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            string tra= treeList2.FocusedNode[7].ToString().Trim();
+            if(tra=="True")
+            {
+                MessageBox.Show("Xe đã được trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+           
+        }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             // trả xe UpdateHopDong
             try
             {
-                string url_hd = "https://localhost:44302/api/HopDong/UpdateHopDong?id=" + Global.id_hop_dong;
-                var result = Http.POST(url_hd);
-                var temp = JsonConvert.DeserializeObject<List<dynamic>>(result);
-                int result_inser = temp[0]["update_hop_dong"];
-                if (result_inser != 200)
-                    MessageBox.Show("Thất bại");
-                else
-                    MessageBox.Show("Thành công");
-                CheckPhat();
-            }
-            catch (Exception)
-            {
+                string bien_so = treeList2.FocusedNode[3].ToString().Trim();
 
+                if (MessageBox.Show("Bạn có muốn thanh toán xe " + bien_so, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (Check())
+                    {
+                        string url_hd = "https://localhost:44302/api/HopDong/UpdateHopDong?id_hop_dong=" + Global.id_hop_dong.Trim() + "&km_tra=" + textBox1.Text + "&bien_so=" + bien_so;
+                        var result = Http.POST(url_hd);
+                        var temp = JsonConvert.DeserializeObject<List<dynamic>>(result);
+                        int result_inser = temp[0]["update_hop_dong"];
+                        if (result_inser != 200)
+                            MessageBox.Show("Thất bại");
+                        else
+                        {
+                            MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK);
+                            LoadData();
+                        }
+                    }
+                                      
+
+                      
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
                 MessageBox.Show("Xảy ra lỗi, vui lòng thử lại sau!");
             }
             
         }
-        public void CheckPhat()
-        {
-            string url_hd = "https://localhost:44302/api/HopDong/SearchPhieuPhat?id=" + Global.id_hop_dong;
-            PhieuPhat pp = new PhieuPhat();
-            var temp = Global.LoadData<PhieuPhat>(pp, url_hd);
-            if (temp.Count!=0)
-                MessageBox.Show("Khách trả xe trễ hạn, vui lòng kiểm tra phiếu phạt");
-        }
+       
     }
     public class CTHD
     {
        
-        public int id_hop_dong { get; set; }
+        public string id_hop_dong { get; set; }
         public DateTime ngay_thue { get; set; }
         public DateTime ngay_tra { get; set; }
-        public bool tinh_trang { get; set; }
+        public bool status { get; set; }
         public string bien_so_hd { get; set; }
         public double gia_thue { get; set; }
         public int so_ngay_thue { get; set; }
         public double tong_tien { get; set; }
+        public int km_hien_tai { get; set; }
     }
     public class PhieuPhat
     {

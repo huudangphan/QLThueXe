@@ -17,10 +17,9 @@ namespace QLThueXe.Services.Repository
             string query = string.Format("select * from get_khach('{0}','{1}','{2}','{3}','{4}')", cmnd, ten, dia_chi, sdt, ngay_sinh);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
-        public string GetKhachByID(int id_hop_dong)
+        public string GetKhachByID(string id_hop_dong)
         {
-            string query = string.Format("select k.*   from khach k join  (select cmnd, ct.* from ct_hop_dong ct " +
-                "join hop_dong h on ct.id_hop_dong = h.id_hop_dong and h.id_hop_dong = {0}) hd   on k.cmnd = hd.cmnd",id_hop_dong);
+            string query = string.Format("	select k.* from khach k join hop_dong hd   on k.cmnd = hd.cmnd    where hd.id_hop_dong = '{0}'", id_hop_dong);
 
             return DataBaseServices.Instance.ExecuteQuery(query);
         }

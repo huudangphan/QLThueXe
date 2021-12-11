@@ -50,18 +50,26 @@ namespace QuanLy
             {
                 try
                 {
-                    DateTime ngay_thue = DateTime.Now;
-                    DateTime ngay_tra = new DateTime();
+                    string ngay_thue = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString(); 
+
+
                     bool status = false;
                     int so_ngay = Int32.Parse(numericUpDown1.Value.ToString());
-                   
-                    string url = "https://localhost:44302/api/HopDong/InsertHopDong?tinh_trang=false&so_ngay="+so_ngay+"&cmnd="+Global.cmnd;
+                    //https://localhost:44302/api/HopDong/InsertHopDong?ngay_thue=2021-11-11&cmnd=a&tien_coc=500000
+                    string url = "https://localhost:44302/api/HopDong/InsertHopDong?ngay_thue="+ngay_thue+"&cmnd="+txt_cmnd.Text+"&tien_coc="+txttiencoc.Text;
                     var result= Http.POST(url);
                     var temp = JsonConvert.DeserializeObject<List<dynamic>>(result);
-                    int result_update = temp[0]["insert_hop_dong"];
-                    foreach (var item in fDanhSachXe.lstXe)
+                    int result_update = temp[0]["insert_hop_dong"];                    
+                    int row = dataGridView1.Rows.Count;
+                    string bks, tong_tien, ngay, km;
+
+                    for (int i = 0; i < row; i++)
                     {
-                        string temp_url = "https://localhost:44302/api/HopDong/InsertCTHD?bien_so="+item.bien_so+"&gia_thue="+item.gia_thue+"&so_ngay="+so_ngay;
+                        bks = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                        tong_tien= dataGridView1.Rows[i].Cells[1].Value.ToString(); 
+                        ngay= dataGridView1.Rows[i].Cells[2].Value.ToString();
+                        km= dataGridView1.Rows[i].Cells[3].Value.ToString();
+                        string temp_url = "https://localhost:44302/api/HopDong/InsertCTHD?bien_so="+bks+"&gia_thue="+tong_tien+"&so_ngay="+ngay+"&km_hien_tai="+km;
                         Http.POST(temp_url);
                     }
                     if (result_update != 200)
@@ -95,6 +103,11 @@ namespace QuanLy
                 MessageBox.Show(ex.Message.ToString());
             }
             
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
 
         }
     }

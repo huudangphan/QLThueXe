@@ -48,5 +48,6 @@ namespace QuanLy
         public static string sdt { get; set; }
         public static DateTime ngay_sinh { get; set; }
         public static string id_hop_dong { get; set; }
+
     }
 }

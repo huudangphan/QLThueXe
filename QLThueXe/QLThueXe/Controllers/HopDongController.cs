@@ -47,5 +47,10 @@ namespace QLThueXe.Controllers
         {
             return db.Search_phieu_phat_by_id(id);
         }
+        [HttpGet]
+        public string SearchHoaDon(string id_hop_dong,string bien_so)
+        {
+            return db.Search_Hoa_Don(id_hop_dong,bien_so);
+        }
     }
 }

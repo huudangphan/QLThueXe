@@ -42,57 +42,65 @@ namespace QuanLy
             // btnDangNhap
             // 
             this.btnDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.Image")));
-            this.btnDangNhap.Location = new System.Drawing.Point(401, 288);
+            this.btnDangNhap.Location = new System.Drawing.Point(301, 234);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(115, 44);
+            this.btnDangNhap.Size = new System.Drawing.Size(103, 36);
             this.btnDangNhap.TabIndex = 10;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(401, 222);
+            this.textEdit2.EditValue = "24122021";
+            this.textEdit2.Location = new System.Drawing.Point(301, 180);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(199, 22);
+            this.textEdit2.Size = new System.Drawing.Size(149, 20);
             this.textEdit2.TabIndex = 9;
             this.textEdit2.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(401, 118);
+            this.textEdit1.EditValue = "postgres";
+            this.textEdit1.Location = new System.Drawing.Point(301, 96);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(199, 22);
+            this.textEdit1.Size = new System.Drawing.Size(149, 20);
             this.textEdit1.TabIndex = 8;
             this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(201, 225);
+            this.labelControl2.Location = new System.Drawing.Point(151, 183);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(56, 17);
+            this.labelControl2.Size = new System.Drawing.Size(44, 13);
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "Mật khẩu";
             this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(201, 121);
+            this.labelControl1.Location = new System.Drawing.Point(151, 98);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(93, 17);
+            this.labelControl1.Size = new System.Drawing.Size(72, 13);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Tên đăng nhập";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // fLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fLogin";
             this.Text = "fLogin";
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();

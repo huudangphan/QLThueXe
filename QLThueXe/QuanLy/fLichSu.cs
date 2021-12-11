@@ -51,6 +51,7 @@ namespace QuanLy
         public string cmnd { get; set; }
         public double tien_coc { get; set; }
         public string id_hop_dong { get; set; }
+        public bool tra_coc { get; set; }
 
     }
        
