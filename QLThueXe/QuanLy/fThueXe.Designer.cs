@@ -45,8 +45,6 @@ namespace QuanLy
             this.txt_tong_tien = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtkm = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txttiencoc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,11 +68,11 @@ namespace QuanLy
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(22, 326);
+            this.groupBox2.Location = new System.Drawing.Point(22, 305);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(715, 162);
+            this.groupBox2.Size = new System.Drawing.Size(715, 183);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
@@ -189,8 +187,6 @@ namespace QuanLy
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtkm);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txttiencoc);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.numericUpDown1);
@@ -203,27 +199,10 @@ namespace QuanLy
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(715, 231);
+            this.groupBox1.Size = new System.Drawing.Size(715, 203);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin xe";
-            // 
-            // txtkm
-            // 
-            this.txtkm.Location = new System.Drawing.Point(115, 177);
-            this.txtkm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtkm.Name = "txtkm";
-            this.txtkm.Size = new System.Drawing.Size(135, 23);
-            this.txtkm.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 181);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Số km hiện tại";
             // 
             // txttiencoc
             // 
@@ -330,8 +309,6 @@ namespace QuanLy
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txttiencoc;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtkm;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

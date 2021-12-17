@@ -28,18 +28,23 @@ namespace QuanLy
         }
         public void LoadData()
         {
-            dataGridView1.DataSource = fDanhSachXe.lstXe;
-            dataGridView1.Columns[0].HeaderText = "Biển số";
-            dataGridView1.Columns[0].HeaderText = "Giá thuê";
-            dataGridView1.Columns[0].HeaderText = "Số ngày thuê";
-            dataGridView1.Columns[0].HeaderText = "Hiện tại";
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            if(fDanhSachXe.lstXe!=null)
+            {
+                dataGridView1.DataSource = fDanhSachXe.lstXe;
+                dataGridView1.Columns[0].HeaderText = "Biển số";
+                dataGridView1.Columns[0].HeaderText = "Giá thuê";
+                dataGridView1.Columns[0].HeaderText = "Số ngày thuê";
+                dataGridView1.Columns[0].HeaderText = "Hiện tại";
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+           
         }
         private void flyoutPanel1_Load(object sender, EventArgs e)
         {
 
         }
 
+       
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             if (fDanhSachXe.lstXe.Count<1 )
@@ -50,32 +55,40 @@ namespace QuanLy
             {
                 try
                 {
-                    string ngay_thue = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString(); 
+                    string ngay_thue = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
 
+                    if (!string.IsNullOrEmpty(txttiencoc.Text))
+                    {                       
+                        int so_ngay = Int32.Parse(numericUpDown1.Value.ToString());                       
+                        string url = "https://localhost:44302/api/HopDong/InsertHopDong?ngay_thue=" + ngay_thue + "&cmnd=" + txt_cmnd.Text + "&tien_coc=" + txttiencoc.Text;
+                        var result = Http.POST(url);
+                        var temp = JsonConvert.DeserializeObject<List<dynamic>>(result);
+                        int result_update = temp[0]["insert_hop_dong"];
+                        int row = dataGridView1.Rows.Count;
+                        string bks, tong_tien, ngay, km;
 
-                    bool status = false;
-                    int so_ngay = Int32.Parse(numericUpDown1.Value.ToString());
-                    //https://localhost:44302/api/HopDong/InsertHopDong?ngay_thue=2021-11-11&cmnd=a&tien_coc=500000
-                    string url = "https://localhost:44302/api/HopDong/InsertHopDong?ngay_thue="+ngay_thue+"&cmnd="+txt_cmnd.Text+"&tien_coc="+txttiencoc.Text;
-                    var result= Http.POST(url);
-                    var temp = JsonConvert.DeserializeObject<List<dynamic>>(result);
-                    int result_update = temp[0]["insert_hop_dong"];                    
-                    int row = dataGridView1.Rows.Count;
-                    string bks, tong_tien, ngay, km;
-
-                    for (int i = 0; i < row; i++)
-                    {
-                        bks = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                        tong_tien= dataGridView1.Rows[i].Cells[1].Value.ToString(); 
-                        ngay= dataGridView1.Rows[i].Cells[2].Value.ToString();
-                        km= dataGridView1.Rows[i].Cells[3].Value.ToString();
-                        string temp_url = "https://localhost:44302/api/HopDong/InsertCTHD?bien_so="+bks+"&gia_thue="+tong_tien+"&so_ngay="+ngay+"&km_hien_tai="+km;
-                        Http.POST(temp_url);
+                        for (int i = 0; i < row; i++)
+                        {
+                            bks = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                            tong_tien = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                            ngay = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                            km = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                            string temp_url = "https://localhost:44302/api/HopDong/InsertCTHD?bien_so=" + bks + "&gia_thue=" + tong_tien + "&so_ngay=" + ngay + "&km_hien_tai=" + km;
+                            Http.POST(temp_url);
+                        }
+                        if (result_update != 200)
+                            MessageBox.Show("Thuê xe thất bại");
+                        else
+                        {
+                            Global.cmnd = Global.dia_chi = Global.sdt = Global.tenkh = "";
+                            fDanhSachXe.lstXe = null;
+                            MessageBox.Show("Thuê xe thành công");
+                        }
+                           
                     }
-                    if (result_update != 200)
-                        MessageBox.Show("Thuê xe thất bại");
                     else
-                        MessageBox.Show("Thuê xe thành công");
+                        MessageBox.Show("Tiền cọc không được để trống");
+                   
                 }
                 catch (Exception ex)
                 {
@@ -95,7 +108,7 @@ namespace QuanLy
                 txt_bks.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
                 txt_tong_tien.Text = dataGridView1.Rows[index].Cells[1].Value.ToString();
                 numericUpDown1.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
-                txtkm.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
+               
             }
             catch (Exception ex)
             {

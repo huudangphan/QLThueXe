@@ -86,6 +86,25 @@ namespace QuanLy
             Global.bien_so = "79A-12624";
 
         }
-      
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement6_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Global.id_hop_dong) || string.IsNullOrEmpty(Global.bien_so))
+                MessageBox.Show("Vui lòng thanh toán hợp đồng trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                fMain.Controls.Clear();
+                fHoaDon f = new fHoaDon();
+                f.Dock = DockStyle.Fill;
+                fMain.Controls.Add(f);
+            }
+            
+
+        }
     }
 }

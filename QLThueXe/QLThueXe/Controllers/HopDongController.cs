@@ -13,7 +13,7 @@ namespace QLThueXe.Controllers
     {
         HopDongRepository db = new HopDongRepository();
         [HttpPost]
-        public string InsertHopDong(DateTime ngay_thue, string cmnd, double tien_coc)
+        public string InsertHopDong(string ngay_thue, string cmnd, double tien_coc)
         {
             return db.InsertHopDong(  ngay_thue,cmnd,tien_coc);
         }
