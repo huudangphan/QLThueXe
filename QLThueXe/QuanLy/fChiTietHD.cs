@@ -17,8 +17,7 @@ namespace QuanLy
         public fChiTietHD()
         {
             InitializeComponent();
-            LoadData();
-            //CheckPhat();
+            LoadData();           
 
         }
         public void LoadData()
@@ -63,7 +62,7 @@ namespace QuanLy
             try
             {
                 string bien_so = treeList2.FocusedNode[3].ToString().Trim();
-
+                Global.bien_so = bien_so;
                 if (MessageBox.Show("Bạn có muốn thanh toán xe " + bien_so, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     if (Check())
@@ -79,21 +78,16 @@ namespace QuanLy
                             MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK);
                             LoadData();
                         }
-                    }
-                                      
-
-                      
+                    }                                    
+                                          
                 }
-
             }
             catch (Exception ex)
             {
                 string error = ex.ToString();
                 MessageBox.Show("Xảy ra lỗi, vui lòng thử lại sau!");
-            }
-            
-        }
-       
+            }            
+        }       
     }
     public class CTHD
     {

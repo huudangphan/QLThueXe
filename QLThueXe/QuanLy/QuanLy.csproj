@@ -57,6 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoDuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaoDuong.Designer.cs">
+      <DependentUpon>BaoDuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddBaoDuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fAddBaoDuong.Designer.cs">
+      <DependentUpon>fAddBaoDuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="fChiTietHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     <Compile Include="ModelXe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoDuong.resx">
+      <DependentUpon>BaoDuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddBaoDuong.resx">
+      <DependentUpon>fAddBaoDuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fChiTietHD.resx">
       <DependentUpon>fChiTietHD.cs</DependentUpon>
     </EmbeddedResource>

@@ -81,3 +81,5 @@ D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fThemKhachHang.resources
 D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fLogin.resources
 D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fHoaDon.resources
 D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fHD.resources
+D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.BaoDuong.resources
+D:\QLThueXe\QLThueXe\QuanLy\obj\Debug\QuanLy.fAddBaoDuong.resources

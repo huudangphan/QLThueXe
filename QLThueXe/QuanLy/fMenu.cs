@@ -106,5 +106,21 @@ namespace QuanLy
             
 
         }
+
+        private void accordionControlElement15_Click(object sender, EventArgs e)
+        {
+            fMain.Controls.Clear();
+            BaoDuong f = new BaoDuong();
+            f.Dock = DockStyle.Fill;
+            fMain.Controls.Add(f);
+        }
+
+        private void accordionControlElement16_Click(object sender, EventArgs e)
+        {
+            fMain.Controls.Clear();
+            fAddBaoDuong f = new fAddBaoDuong();
+            f.Dock = DockStyle.Fill;
+            fMain.Controls.Add(f);
+        }
     }
 }
