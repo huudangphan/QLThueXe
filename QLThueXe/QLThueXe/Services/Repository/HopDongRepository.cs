@@ -20,7 +20,9 @@ namespace QLThueXe.Services.Repository
         }
         public string SearchHopDong(string cmnd)
         {
-            string query = string.Format("select * from search_hop_dong('{0}')", cmnd) ;
+            string query2 = string.Format("BEGIN TRANSACTION; SET TRANSACTION ISOLATION LEVEL REPEATABLE READ; ");
+            string query = string.Format("select * from search_hop_dong('{0}');commit", cmnd) ;
+            DataBaseServices.Instance.ExecuteNonQuery(query2);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
         public string ChiTietHopDong(string id)
@@ -46,7 +48,7 @@ namespace QLThueXe.Services.Repository
         }
         public string Search_ct_hop_dong_byid(string id)
         {
-            string query2 = string.Format("BEGIN TRANSACTION; SET TRANSACTION ISOLATION LEVEL SERIALIZABLE; ");
+            string query2 = string.Format("BEGIN TRANSACTION; SET TRANSACTION ISOLATION LEVEL REPEATABLE READ; ");
             DataBaseServices.Instance.ExecuteQuery(query2);
             string query = string.Format("select * from search_ct_hop_dong_byid('{0}');commit;",id);
             return DataBaseServices.Instance.ExecuteQuery(query);
