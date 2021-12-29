@@ -12,5 +12,6 @@ namespace QuanLy
         public  double gia_thue { get; set; }
         public int so_ngay_thue { get; set; }
         public int km_hien_tai { get; set; }
+        public string tai_xe { get; set; }
     }
 }

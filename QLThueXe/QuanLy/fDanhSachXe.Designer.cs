@@ -89,11 +89,11 @@ namespace QuanLy
             this.treeListColumn4,
             this.treeListColumn5,
             this.treeListColumn6});
-            this.treeList1.Location = new System.Drawing.Point(11, 74);
+            this.treeList1.Location = new System.Drawing.Point(12, 76);
             this.treeList1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeList1.MinWidth = 17;
             this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(733, 334);
+            this.treeList1.Size = new System.Drawing.Size(702, 330);
             this.treeList1.TabIndex = 0;
             this.treeList1.TreeLevelWidth = 15;
             this.treeList1.RowClick += new DevExpress.XtraTreeList.RowClickEventHandler(this.treeList1_RowClick);
@@ -152,10 +152,10 @@ namespace QuanLy
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(89, 412);
+            this.simpleButton1.Location = new System.Drawing.Point(87, 410);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(655, 36);
+            this.simpleButton1.Size = new System.Drawing.Size(627, 36);
             this.simpleButton1.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Lưu";
@@ -178,60 +178,60 @@ namespace QuanLy
             this.fDanhSachXelayoutControl1ConvertedLayout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fDanhSachXelayoutControl1ConvertedLayout.Name = "fDanhSachXelayoutControl1ConvertedLayout";
             this.fDanhSachXelayoutControl1ConvertedLayout.Root = this.layoutControlGroup1;
-            this.fDanhSachXelayoutControl1ConvertedLayout.Size = new System.Drawing.Size(755, 458);
+            this.fDanhSachXelayoutControl1ConvertedLayout.Size = new System.Drawing.Size(726, 458);
             this.fDanhSachXelayoutControl1ConvertedLayout.TabIndex = 17;
             // 
             // txtmdk
             // 
-            this.txtmdk.Location = new System.Drawing.Point(602, 10);
+            this.txtmdk.Location = new System.Drawing.Point(581, 12);
             this.txtmdk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtmdk.Name = "txtmdk";
-            this.txtmdk.Size = new System.Drawing.Size(142, 20);
+            this.txtmdk.Size = new System.Drawing.Size(133, 20);
             this.txtmdk.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.txtmdk.TabIndex = 8;
             // 
             // txtgia
             // 
-            this.txtgia.Location = new System.Drawing.Point(313, 34);
+            this.txtgia.Location = new System.Drawing.Point(304, 36);
             this.txtgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtgia.Name = "txtgia";
-            this.txtgia.Size = new System.Drawing.Size(122, 20);
+            this.txtgia.Size = new System.Drawing.Size(114, 20);
             this.txtgia.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.txtgia.TabIndex = 7;
             // 
             // txtten
             // 
-            this.txtten.Location = new System.Drawing.Point(313, 10);
+            this.txtten.Location = new System.Drawing.Point(304, 12);
             this.txtten.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtten.Name = "txtten";
-            this.txtten.Size = new System.Drawing.Size(122, 20);
+            this.txtten.Size = new System.Drawing.Size(114, 20);
             this.txtten.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.txtten.TabIndex = 6;
             // 
             // txthang
             // 
-            this.txthang.Location = new System.Drawing.Point(82, 34);
+            this.txthang.Location = new System.Drawing.Point(83, 36);
             this.txthang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txthang.Name = "txthang";
-            this.txthang.Size = new System.Drawing.Size(156, 20);
+            this.txthang.Size = new System.Drawing.Size(146, 20);
             this.txthang.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.txthang.TabIndex = 5;
             // 
             // txtbks
             // 
-            this.txtbks.Location = new System.Drawing.Point(82, 10);
+            this.txtbks.Location = new System.Drawing.Point(83, 12);
             this.txtbks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbks.Name = "txtbks";
-            this.txtbks.Size = new System.Drawing.Size(156, 20);
+            this.txtbks.Size = new System.Drawing.Size(146, 20);
             this.txtbks.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.txtbks.TabIndex = 4;
             // 
             // checkBox1
             // 
-            this.checkBox1.Location = new System.Drawing.Point(439, 10);
+            this.checkBox1.Location = new System.Drawing.Point(422, 12);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(88, 20);
+            this.checkBox1.Size = new System.Drawing.Size(84, 20);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Đã thuê";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -239,10 +239,10 @@ namespace QuanLy
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(531, 34);
+            this.simpleButton3.Location = new System.Drawing.Point(510, 36);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(213, 36);
+            this.simpleButton3.Size = new System.Drawing.Size(204, 36);
             this.simpleButton3.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.simpleButton3.TabIndex = 3;
             this.simpleButton3.Text = "Tìm kiếm";
@@ -251,10 +251,10 @@ namespace QuanLy
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(11, 412);
+            this.simpleButton2.Location = new System.Drawing.Point(12, 410);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(74, 36);
+            this.simpleButton2.Size = new System.Drawing.Size(71, 36);
             this.simpleButton2.StyleController = this.fDanhSachXelayoutControl1ConvertedLayout;
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Chọn";
@@ -276,15 +276,15 @@ namespace QuanLy
             this.simpleButton1item,
             this.treeList1item});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(755, 458);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(726, 458);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // textEdit6item
             // 
             this.textEdit6item.Control = this.txtmdk;
-            this.textEdit6item.Location = new System.Drawing.Point(520, 0);
+            this.textEdit6item.Location = new System.Drawing.Point(498, 0);
             this.textEdit6item.Name = "textEdit6item";
-            this.textEdit6item.Size = new System.Drawing.Size(217, 24);
+            this.textEdit6item.Size = new System.Drawing.Size(208, 24);
             this.textEdit6item.Text = "Mã đăng kiểm";
             this.textEdit6item.TextLocation = DevExpress.Utils.Locations.Left;
             this.textEdit6item.TextSize = new System.Drawing.Size(68, 13);
@@ -292,9 +292,9 @@ namespace QuanLy
             // textEdit3item
             // 
             this.textEdit3item.Control = this.txtgia;
-            this.textEdit3item.Location = new System.Drawing.Point(231, 24);
+            this.textEdit3item.Location = new System.Drawing.Point(221, 24);
             this.textEdit3item.Name = "textEdit3item";
-            this.textEdit3item.Size = new System.Drawing.Size(197, 40);
+            this.textEdit3item.Size = new System.Drawing.Size(189, 40);
             this.textEdit3item.Text = "Giá thuê";
             this.textEdit3item.TextLocation = DevExpress.Utils.Locations.Left;
             this.textEdit3item.TextSize = new System.Drawing.Size(68, 13);
@@ -302,9 +302,9 @@ namespace QuanLy
             // textEdit4item
             // 
             this.textEdit4item.Control = this.txtten;
-            this.textEdit4item.Location = new System.Drawing.Point(231, 0);
+            this.textEdit4item.Location = new System.Drawing.Point(221, 0);
             this.textEdit4item.Name = "textEdit4item";
-            this.textEdit4item.Size = new System.Drawing.Size(197, 24);
+            this.textEdit4item.Size = new System.Drawing.Size(189, 24);
             this.textEdit4item.Text = "Tên xe";
             this.textEdit4item.TextLocation = DevExpress.Utils.Locations.Left;
             this.textEdit4item.TextSize = new System.Drawing.Size(68, 13);
@@ -314,7 +314,7 @@ namespace QuanLy
             this.textEdit2item.Control = this.txthang;
             this.textEdit2item.Location = new System.Drawing.Point(0, 24);
             this.textEdit2item.Name = "textEdit2item";
-            this.textEdit2item.Size = new System.Drawing.Size(231, 40);
+            this.textEdit2item.Size = new System.Drawing.Size(221, 40);
             this.textEdit2item.Text = "Hãng";
             this.textEdit2item.TextLocation = DevExpress.Utils.Locations.Left;
             this.textEdit2item.TextSize = new System.Drawing.Size(68, 13);
@@ -324,7 +324,7 @@ namespace QuanLy
             this.textEdit1item.Control = this.txtbks;
             this.textEdit1item.Location = new System.Drawing.Point(0, 0);
             this.textEdit1item.Name = "textEdit1item";
-            this.textEdit1item.Size = new System.Drawing.Size(231, 24);
+            this.textEdit1item.Size = new System.Drawing.Size(221, 24);
             this.textEdit1item.Text = "Biển kiểm soát";
             this.textEdit1item.TextLocation = DevExpress.Utils.Locations.Left;
             this.textEdit1item.TextSize = new System.Drawing.Size(68, 13);
@@ -332,36 +332,36 @@ namespace QuanLy
             // checkBox1item
             // 
             this.checkBox1item.Control = this.checkBox1;
-            this.checkBox1item.Location = new System.Drawing.Point(428, 0);
+            this.checkBox1item.Location = new System.Drawing.Point(410, 0);
             this.checkBox1item.Name = "checkBox1item";
-            this.checkBox1item.Size = new System.Drawing.Size(92, 64);
+            this.checkBox1item.Size = new System.Drawing.Size(88, 64);
             this.checkBox1item.TextSize = new System.Drawing.Size(0, 0);
             this.checkBox1item.TextVisible = false;
             // 
             // simpleButton3item
             // 
             this.simpleButton3item.Control = this.simpleButton3;
-            this.simpleButton3item.Location = new System.Drawing.Point(520, 24);
+            this.simpleButton3item.Location = new System.Drawing.Point(498, 24);
             this.simpleButton3item.Name = "simpleButton3item";
-            this.simpleButton3item.Size = new System.Drawing.Size(217, 40);
+            this.simpleButton3item.Size = new System.Drawing.Size(208, 40);
             this.simpleButton3item.TextSize = new System.Drawing.Size(0, 0);
             this.simpleButton3item.TextVisible = false;
             // 
             // simpleButton2item
             // 
             this.simpleButton2item.Control = this.simpleButton2;
-            this.simpleButton2item.Location = new System.Drawing.Point(0, 402);
+            this.simpleButton2item.Location = new System.Drawing.Point(0, 398);
             this.simpleButton2item.Name = "simpleButton2item";
-            this.simpleButton2item.Size = new System.Drawing.Size(78, 40);
+            this.simpleButton2item.Size = new System.Drawing.Size(75, 40);
             this.simpleButton2item.TextSize = new System.Drawing.Size(0, 0);
             this.simpleButton2item.TextVisible = false;
             // 
             // simpleButton1item
             // 
             this.simpleButton1item.Control = this.simpleButton1;
-            this.simpleButton1item.Location = new System.Drawing.Point(78, 402);
+            this.simpleButton1item.Location = new System.Drawing.Point(75, 398);
             this.simpleButton1item.Name = "simpleButton1item";
-            this.simpleButton1item.Size = new System.Drawing.Size(659, 40);
+            this.simpleButton1item.Size = new System.Drawing.Size(631, 40);
             this.simpleButton1item.TextSize = new System.Drawing.Size(0, 0);
             this.simpleButton1item.TextVisible = false;
             // 
@@ -370,7 +370,7 @@ namespace QuanLy
             this.treeList1item.Control = this.treeList1;
             this.treeList1item.Location = new System.Drawing.Point(0, 64);
             this.treeList1item.Name = "treeList1item";
-            this.treeList1item.Size = new System.Drawing.Size(737, 338);
+            this.treeList1item.Size = new System.Drawing.Size(706, 334);
             this.treeList1item.TextSize = new System.Drawing.Size(0, 0);
             this.treeList1item.TextVisible = false;
             // 
@@ -381,7 +381,7 @@ namespace QuanLy
             this.Controls.Add(this.fDanhSachXelayoutControl1ConvertedLayout);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fDanhSachXe";
-            this.Size = new System.Drawing.Size(755, 458);
+            this.Size = new System.Drawing.Size(726, 458);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fDanhSachXelayoutControl1ConvertedLayout)).EndInit();

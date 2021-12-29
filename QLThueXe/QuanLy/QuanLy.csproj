@@ -129,6 +129,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTaiXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTaiXe.Designer.cs">
+      <DependentUpon>fTaiXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThemKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMenu.resx">
       <DependentUpon>fMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTaiXe.resx">
+      <DependentUpon>fTaiXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemKhachHang.resx">
       <DependentUpon>fThemKhachHang.cs</DependentUpon>

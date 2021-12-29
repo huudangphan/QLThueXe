@@ -49,22 +49,34 @@ namespace QuanLy
         {
             
         }
-
+        
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             try
-            {
+            {               
+                
                 if (treeList1.FocusedNode[4].ToString() == "True")
                     MessageBox.Show("Xe đã được thuê");
                 else
                 {
-                    
                     string bien_so = treeList1.FocusedNode[0].ToString();
                     Global.bien_so = bien_so;
                     double gia_thue = double.Parse(treeList1.FocusedNode[2].ToString());
-                    lstXe.Add(new ModelXe() { bien_so = bien_so, gia_thue = gia_thue, so_ngay_thue = 3, km_hien_tai = 0 }) ;
-                    MessageBox.Show("Chọn xe thành công");
+                    if (MessageBox.Show("Bạn có muốn chọn thuê tài xế ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        Global.bien_so = bien_so;
+                        Global.gia_thue = gia_thue;
 
+                        fTaiXe f = new fTaiXe();
+                        f.ShowDialog();
+                    }
+                    else
+                    {
+                        lstXe.Add(new ModelXe() { bien_so = bien_so, gia_thue = gia_thue, so_ngay_thue = 3, km_hien_tai = 0, tai_xe = "tu_lai" });
+                        MessageBox.Show("Chọn xe thành công");
+                    }
+
+                    
                 }
             }
             catch (Exception ex)
