@@ -11,12 +11,12 @@ namespace QLThueXe.Services.Repository
         
         public string InsertData(string bien_so,int id_hang,string ten_xe,double gia_thue,string ma_ks,bool status)
         {
-            string query = string.Format("BEGIN TRANSACTION; SET TRANSACTION ISOLATION LEVEL SERIALIZABLE; select *  from insert_xe('{0}',{1},'{2}',{3},'{4}',{5}) ", bien_so, id_hang, ten_xe, gia_thue, ma_ks,status);
+            string query = string.Format("BEGIN TRANSACTION; SET TRANSACTION ISOLATION LEVEL SERIALIZABLE; select *  from insert_xe('{0}',{1},'{2}',{3},'{4}',{5});commit ", bien_so, id_hang, ten_xe, gia_thue, ma_ks,status);
             try
             {
                 
                 var a= DataBaseServices.Instance.ExecuteQuery(query);
-                DataBaseServices.Instance.ExecuteQuery("commit");
+                //DataBaseServices.Instance.ExecuteQuery("commit");
                 return a;
             }
             catch (Exception ex)

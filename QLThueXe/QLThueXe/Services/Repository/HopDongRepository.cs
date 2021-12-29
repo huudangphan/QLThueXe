@@ -63,5 +63,20 @@ namespace QLThueXe.Services.Repository
             string query = string.Format("select * from search_hoa_don('{0}','{1}')",id_hop_dong,bien_so);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
+        public string Get_tai_xe()
+        {
+            string query = "select * from taixe";
+            return DataBaseServices.Instance.ExecuteQuery(query);
+        }
+        public string InsertTaiXe(string cmnd,string tai_xe,DateTime ngaysinh)
+        {
+            string query = string.Format("select * from insert_taixe('{0}','{1}','{2}')", cmnd, tai_xe, ngaysinh);
+            return DataBaseServices.Instance.ExecuteQuery(query);
+        }
+        public string InsertPhanCong(string cmnd,string bien_so,DateTime from_date,int so_ngay)
+        {
+            string query = string.Format("select * from insert_phan_cong('{0}','{1}','{2}',{3})");
+            return DataBaseServices.Instance.ExecuteQuery(query);
+        }
     }
 }

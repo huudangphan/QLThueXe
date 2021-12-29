@@ -52,5 +52,20 @@ namespace QLThueXe.Controllers
         {
             return db.Search_Hoa_Don(id_hop_dong,bien_so);
         }
+        [HttpGet]
+        public string GetTaiXe()
+        {
+            return db.Get_tai_xe();
+        }
+        [HttpPost]
+        public string InsertTaiXe(string cmnd,string ten,DateTime ngaysinh)
+        {
+            return db.InsertTaiXe(cmnd, ten, ngaysinh);
+        }
+        [HttpPost]
+        public string InsertPhanCong(string cmnd, string bien_so, DateTime from_date, int so_ngay)
+        {
+            return db.InsertPhanCong(cmnd, bien_so, from_date, so_ngay);
+        }
     }
 }

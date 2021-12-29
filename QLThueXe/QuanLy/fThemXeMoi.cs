@@ -18,6 +18,13 @@ namespace QuanLy
         public fThemXeMoi()
         {
             InitializeComponent();
+            LoadCombobox();
+        }
+        public void LoadCombobox()
+        {
+            cbHang.Items.Add("Toyota");
+            cbHang.Items.Add("Honda");
+            cbHang.Items.Add("Ford");
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -25,12 +32,19 @@ namespace QuanLy
             
             try
             {
+                string hang = "";
+                if (cbHang.Text == "Toyota")
+                    hang = "1";
+                else if (cbHang.Text == "Honda")
+                    hang = "2";
+                else
+                    hang = "3";
                 string bks = txtBienKiemSoat.Text;
                 string tenXe = txtTenXe.Text;
                 string madk = txtMaDangKiem.Text;
                 double giaThue = double.Parse(txtGiaTHue.Text);
               
-                var result = Http.POST("https://localhost:44302/api/Xe/InsertDataXe?bien_so="+bks+"&id_hang=1&ten_xe="+tenXe+"&gia_thue="+giaThue+"&ma_ks="+madk+"&status=false");
+                var result = Http.POST("https://localhost:44302/api/Xe/InsertDataXe?bien_so="+bks+"&id_hang="+hang+"&ten_xe="+tenXe+"&gia_thue="+giaThue+"&ma_ks="+madk+"&status=false");
                 var temp= JsonConvert.DeserializeObject<List<dynamic>>(result);
                 int result_inser = temp[0]["insert_xe"];
                 

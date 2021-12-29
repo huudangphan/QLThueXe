@@ -47,11 +47,7 @@ namespace QuanLy
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            string a = treeList1.FocusedNode[2].ToString();
-            double b = Global.FormatCurrency(a);
-
-            MessageBox.Show(treeList1.FocusedNode[2].ToString());
-            MessageBox.Show(b.ToString());
+            
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -104,6 +100,33 @@ namespace QuanLy
                 MessageBox.Show("Ngưừi dùng không có quyền chỉnh sửa thông tin xe!");
             }
           
+        }
+        public string Hang(string tenxe)
+        {
+            int index = tenxe.IndexOf(' ');
+            string hang = "";
+            for (int i = 0; i < index; i++)
+            {
+                hang += tenxe[i];
+            }
+            return hang;
+        }
+        private void treeList1_RowClick(object sender, DevExpress.XtraTreeList.RowClickEventArgs e)
+        {
+            try
+            {
+                txtbks.Text = treeList1.FocusedNode[0].ToString();
+                txtten.Text = treeList1.FocusedNode[1].ToString();
+                txtgia.Text = treeList1.FocusedNode[2].ToString();
+                txthang.Text = Hang(treeList1.FocusedNode[1].ToString());
+                checkBox1.Checked =Convert.ToBoolean(treeList1.FocusedNode[4].ToString());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show( ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
     }
 }
