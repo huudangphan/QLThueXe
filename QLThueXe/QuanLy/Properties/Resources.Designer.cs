@@ -63,6 +63,16 @@ namespace QuanLy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5d62b49ac544b_thumb900 {
+            get {
+                object obj = ResourceManager.GetObject("5d62b49ac544b_thumb900", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hinh_win_10_don_gian_37_scaled {
             get {
                 object obj = ResourceManager.GetObject("hinh-win-10-don-gian-37-scaled", resourceCulture);
