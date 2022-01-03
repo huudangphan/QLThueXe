@@ -75,7 +75,12 @@ namespace QLThueXe.Services.Repository
         }
         public string InsertPhanCong(string cmnd,string bien_so,DateTime from_date,int so_ngay)
         {
-            string query = string.Format("select * from insert_phan_cong('{0}','{1}','{2}',{3})");
+            string query = string.Format("select * from insert_phan_cong('{0}','{1}','{2}',{3})",cmnd,bien_so,from_date,so_ngay);
+            return DataBaseServices.Instance.ExecuteQuery(query);
+        }
+        public string TraTienCoc(string id)
+        {
+            string query = string.Format("update hop_dong set tra_coc='true' where id_hop_dong='{0}'",id);
             return DataBaseServices.Instance.ExecuteQuery(query);
         }
     }

@@ -32,9 +32,10 @@ namespace QuanLy
             {
                 dataGridView1.DataSource = fDanhSachXe.lstXe;
                 dataGridView1.Columns[0].HeaderText = "Biển số";
-                dataGridView1.Columns[0].HeaderText = "Giá thuê";
-                dataGridView1.Columns[0].HeaderText = "Số ngày thuê";
-                dataGridView1.Columns[0].HeaderText = "Hiện tại";
+                dataGridView1.Columns[1].HeaderText = "Giá thuê";
+                dataGridView1.Columns[2].HeaderText = "Số ngày thuê";
+                dataGridView1.Columns[3].HeaderText = "Hiện tại";
+                dataGridView1.Columns[4].HeaderText = "Tài xế";
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
            
@@ -65,7 +66,7 @@ namespace QuanLy
                         var temp = JsonConvert.DeserializeObject<List<dynamic>>(result);
                         int result_update = temp[0]["insert_hop_dong"];
                         int row = dataGridView1.Rows.Count;
-                        string bks, tong_tien, ngay, km;
+                        string bks, tong_tien, ngay, km,cmnd;
 
                         for (int i = 0; i < row; i++)
                         {
@@ -73,8 +74,11 @@ namespace QuanLy
                             tong_tien = dataGridView1.Rows[i].Cells[1].Value.ToString();
                             ngay = dataGridView1.Rows[i].Cells[2].Value.ToString();
                             km = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                            cmnd= dataGridView1.Rows[i].Cells[4].Value.ToString();
                             string temp_url = "https://localhost:44302/api/HopDong/InsertCTHD?bien_so=" + bks + "&gia_thue=" + tong_tien + "&so_ngay=" + ngay + "&km_hien_tai=" + km;
                             Http.POST(temp_url);
+                            string url_pc = "https://localhost:44302/api/HopDong/InsertPhanCong?cmnd="+cmnd+"&bien_so="+bks+ "&from_date"+ngay+"&so_ngay="+so_ngay;
+                            Http.POST(url_pc);
                         }
                         if (result_update != 200)
                             MessageBox.Show("Thuê xe thất bại");

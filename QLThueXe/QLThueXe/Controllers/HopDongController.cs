@@ -67,5 +67,10 @@ namespace QLThueXe.Controllers
         {
             return db.InsertPhanCong(cmnd, bien_so, from_date, so_ngay);
         }
+        [HttpPost]
+        public string TraCoc(string id)
+        {
+            return db.TraTienCoc(id);
+        }
     }
 }

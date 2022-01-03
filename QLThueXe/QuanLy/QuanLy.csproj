@@ -141,6 +141,12 @@
     <Compile Include="fThemKhachHang.Designer.cs">
       <DependentUpon>fThemKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThemTaiXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fThemTaiXe.Designer.cs">
+      <DependentUpon>fThemTaiXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThemXeMoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fThemKhachHang.resx">
       <DependentUpon>fThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemTaiXe.resx">
+      <DependentUpon>fThemTaiXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemXeMoi.resx">
       <DependentUpon>fThemXeMoi.cs</DependentUpon>

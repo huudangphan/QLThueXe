@@ -42,6 +42,24 @@ namespace QuanLy
             f.Show();
             
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = treeList1.FocusedNode[0].ToString();
+                string baseURL = "https://localhost:44302/api/HopDong/TraCoc?id=" + id;
+                Http.POST(baseURL);
+                MessageBox.Show("Trả tièn cọc thành công");
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString());
+            }
+           
+        }
     }
     class HopDong
     {
